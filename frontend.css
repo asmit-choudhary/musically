@@ -1,0 +1,115 @@
+body{
+    background-color: lightblue;
+}
+
+.hidden{
+    display: none;
+}
+
+.music{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.picture{
+    height: 230px;
+    width: 200px;
+    background-image: url(1953418.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10%;
+}
+
+.name{
+    font-size: 5px;
+}
+h1{
+    font-size: 35px;
+}
+
+h3{
+    font-size: 20px;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.icon{
+    display: flex;
+    display: inline;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pre, .play, .next{
+    padding: 20px;
+    opacity: 0.8;
+    display: inline-block;
+    padding-bottom: 50px;
+}
+
+.pre:hover, .play:hover, .next:hover{
+    opacity: 1;
+}
+
+.slider{
+    width: 70px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: inline;
+}
+
+.start, .total, .seek_slider{
+    display: inline-block;
+}
+
+.volume{
+    padding-top: 25px;
+}
+
+.volume-slider{
+    width: 35%;
+}
+
+.seek_slider {
+    width: 60%;
+}
+
+.start{
+    line-height: 38px;
+    font-size: 10px;
+    font-family: monospace;
+    text-shadow: 1px 1px 0px black;
+    color: white;
+    flex: 5;
+    position: relative;
+  }
+  
+  .start div {
+    position: absolute;
+    background-color: rgba(255,255,255,0.2);
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 38px;
+    z-index: 2;
+  }
+  
+  .start span {
+    position: absolute;
+    z-index: 3;
+    left: 19px;
+  }

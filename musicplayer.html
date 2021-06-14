@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="frontend.css">
+</head>
+<body>
+    <div class="music">
+        <div class="about">
+            <div class="picture"></div>
+            <div class="name"><h1>Song name</h1></div>
+            <div class="artist"><h3>Artist Name</h3></div>
+        </div>
+        <div class="icon">
+            <div class="pre">
+                <i class="fa fa-fast-backward fa-2x" id="pre-song"></i>
+            </div>
+            <div class="play">
+                <i class="fa fa-play-circle fa-4x" id="play-btn"></i>
+                <i class="fa fa-pause-circle fa-4x hidden" id="pause-btn"></i>
+            </div>
+            <div class="next">
+                <i class="fa fa-fast-forward fa-2x" id="next-song"></i>
+            </div>
+        </div>
+        <div class="sider">
+            <div class="start" role="timer" aria-live="off">
+                <span aria-label="timer">00:00</span>
+            </div>
+            <input type="range" min="1" max="100"
+                value="0" class="seek_slider">
+            <div class="total">
+                <span id="total-time">00:00</span>
+            </div>
+            <div class="volume">
+                <i class="fa fa-volume-mute fa-lg"></i>
+                <input type="range" min="1" max="100"
+                    value="50" class="volume_slider" >
+                <i class="fa fa-volume-up fa-lg"></i>
+            </div>
+        </div>
+        <audio controls id = "audio-controls">
+            <source src="./songs/21 Century.mp3" type="audio/mpeg" id = "audio-player-element">
+          </audio>
+    </div>
+    <script src= "musicplayer.js"></script>
+</body>
+</html>
