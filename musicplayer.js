@@ -25,7 +25,8 @@ const songs = {
     }
 }
 
-let audioElement = document.createElement('audio');
+const audioControls = document.createElement('audio');
+audioControls.autoplay = false;
 let currentSong = 0;
 const playBtn = document.querySelector('#play-btn');
 const pauseBtn = document.querySelector('#pause-btn');
@@ -36,7 +37,7 @@ const songPicElem = document.querySelector('.container');
 const songNameElem = document.querySelector('.song-name');
 const songArtistElem = document.querySelector('.song-artist');
 const audioPlayerElem = document.querySelector('#audio-player-element');
-const audioControls = document.querySelector('#audio-controls');
+// const audioControls = document.querySelector('#audio-controls');
 const volumeRange = document.querySelector('#volume-range');
 const timeRange = document.querySelector('#music-range');
 
@@ -67,7 +68,7 @@ function play(source, isNext){
         songName = songName.substring(0,dotPosition);
         songNameElem.children[0].textContent = songName;
         songArtistElem.children[0].textContent = source.artist;
-        audioPlayerElem.setAttribute('src',source.name);
+        audioControls.setAttribute('src',source.name);
         if(audioControls.currentTime < 3 || isNext) audioControls.load();
         audioControls.play();
         isPlaying = !isPlaying;
@@ -83,6 +84,16 @@ function pause(){
     }
 }
 
+function setSongAttributes(source){
+    songPic.style["background-image"] = `url(${source.image})`;
+    songPicElem.style["background-image"] = `url(${source.wallpaper})`;
+    let songName = source.name;
+    songName = songName.substring(songName.lastIndexOf('/')+1);
+    let dotPosition = songName.lastIndexOf('.');
+    songName = songName.substring(0,dotPosition);
+    songNameElem.children[0].textContent = songName;
+    songArtistElem.children[0].textContent = source.artist;
+}
 
 function nextTrack(){
     pause();
@@ -133,4 +144,6 @@ timeRange.addEventListener('change', (evt) => {
     console.log(parseInt((evt.target.value / 100) * audioControls.duration));
 });
 
-
+window.onload = () =>{
+    setSongAttributes(songs[currentSong]);
+};
