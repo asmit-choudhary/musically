@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
+    <title> Music Player</title>
+    <link rel="shortcut icon" href="./songs/images/favicon.ico" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="frontend.css">
 </head>
 <body>
+    <div class = "container">
+    </div>
     <div class="music">
         <div class="about">
             <div class="picture"></div>
-            <div class="name"><h1>Song name</h1></div>
-            <div class="artist"><h3>Artist Name</h3></div>
+            <div class="song-name"><h1>Song name</h1></div>
+            <div class="song-artist"><h3>Artist Name</h3></div>
         </div>
         <div class="icon">
             <div class="pre">
@@ -28,22 +31,24 @@
             </div>
         </div>
         <div class="sider">
-            <div class="start" role="timer" aria-live="off">
-                <span aria-label="timer">00:00</span>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="1" class="slider" id="music-range">
             </div>
-            <input type="range" min="1" max="100"
-                value="0" class="seek_slider">
-            <div class="total">
-                <span id="total-time">00:00</span>
+
+            <div class="time-range">
+                <span id = "start-time">00:00</span>
+                <span id = "finish-time" style = "float: right;">00:00</span>
             </div>
-            <div class="volume">
-                <i class="fa fa-volume-mute fa-lg"></i>
-                <input type="range" min="1" max="100"
-                    value="50" class="volume_slider" >
-                <i class="fa fa-volume-up fa-lg"></i>
+        
+            <div class="volume-container">
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider volume_slider" id="volume-range" >
+                </div>
+                <i class="fa fa-volume-mute fa-lg"></i>    
+                <i class="fa fa-volume-up fa-lg" style = "float: right;"></i>
             </div>
         </div>
-        <audio controls id = "audio-controls">
+        <audio controls id = "audio-controls" hidden>
             <source src="./songs/21 Century.mp3" type="audio/mpeg" id = "audio-player-element">
           </audio>
     </div>
