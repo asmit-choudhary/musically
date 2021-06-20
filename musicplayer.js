@@ -22,11 +22,43 @@ const songs = {
         "artist" : "Justin Bieber",
         "image": "./songs/images/sorry-b375f19b271aa690b075749e76d9b4e9.jpg",
         "wallpaper":"./songs/images/justin-bieber-background.jpg"
+    },
+    "4" :{
+        "name" : "./songs/Dil Mein Ho Tum.mp3",
+        "artist" : "Armaan Malik",
+        "image": "./songs/images/Dil-mein-ho-tum.jpg",
+        "wallpaper":"./songs/images/Dil-Mein-Ho-Tum-Song-Lyrics-background.jpg"
+    },
+    "5" :{
+        "name" : "./songs/Billian Billian.mp3",
+        "artist" : "Guri",
+        "image": "./songs/images/Billian-Billian.jpg",
+        "wallpaper":"./songs/images/Billian-Billian-background.jpg"
+    },
+    "6" :{
+        "name" : "./songs/MADE IN INDIA.mp3",
+        "artist" : "Guru Randhawa",
+        "image": "./songs/images/made-in-india.jpg",
+        "wallpaper":"./songs/images/made-in-india-background.jpg"
+    },
+    "7" :{
+        "name" : "./songs/Kya Baat hai.mp3",
+        "artist" : "Harrdy Sandhu ",
+        "image": "./songs/images/kya-baat-hai.jpg",
+        "wallpaper":"./songs/images/kya-baat-hai-background.jpg"
+    },
+    "8" :{
+        "name" : "./songs/NIRA ISHQ.mp3",
+        "artist" : "Guri",
+        "image": "./songs/images/nira-ishq.jpg",
+        "wallpaper":"./songs/images/nira-ishq-background.jpg"
     }
 }
 
 const audioControls = document.createElement('audio');
 audioControls.autoplay = false;
+audioControls.setAttribute('preload', 'metadata');
+
 let currentSong = 0;
 const playBtn = document.querySelector('#play-btn');
 const pauseBtn = document.querySelector('#pause-btn');
@@ -57,7 +89,7 @@ function playAudio(){
 }
 
 function play(source, isNext){
-    if(!isPlaying){
+    if(audioControls.paused){
         pauseBtn.classList.remove('hidden');
         playBtn.classList.add('hidden');
         songPic.style["background-image"] = `url(${source.image})`;
@@ -68,20 +100,31 @@ function play(source, isNext){
         songName = songName.substring(0,dotPosition);
         songNameElem.children[0].textContent = songName;
         songArtistElem.children[0].textContent = source.artist;
-        audioControls.setAttribute('src',source.name);
-        if(audioControls.currentTime < 3 || isNext) audioControls.load();
+        if(audioControls.currentTime < 3 || isNext){
+            audioControls.setAttribute('src',source.name);
+            audioControls.load();
+        }
         audioControls.play();
-        isPlaying = !isPlaying;
+        settotalTimeOfSong(source);
+        // isPlaying = !isPlaying;
+        console.log(audioControls);
+        console.log("play->" + audioControls.paused);
     }
 }
 
 function pause(){
-    if(isPlaying){
+    if(!audioControls.paused){
         playBtn.classList.remove('hidden');
         pauseBtn.classList.add('hidden');
         audioControls.pause();
-        isPlaying = !isPlaying;
+        // isPlaying = !isPlaying;
+        console.log("pause->" + audioControls.paused);
     }
+}
+
+function settotalTimeOfSong(source){
+    let finishTime = document.querySelector("#finish-time");
+    console.log(audioControls.duration);
 }
 
 function setSongAttributes(source){
@@ -111,7 +154,7 @@ function preTrack(){
 
 document.body.onkeydown = (evt) => {
     evt = evt || window.event;
-    if(evt.keyCode == 32 && isPlaying){
+    if(evt.keyCode == 32 && !audioControls.paused){
         pause();
     }
     else if(evt.keyCode == 32){
@@ -123,6 +166,7 @@ document.body.onkeydown = (evt) => {
     else if(evt.keyCode == 37){
         preTrack();
     }
+    console.log(evt.keyCode);
 }
 
 function changeVolume(evt){
@@ -147,3 +191,7 @@ timeRange.addEventListener('change', (evt) => {
 window.onload = () =>{
     setSongAttributes(songs[currentSong]);
 };
+
+audioControls.addEventListener("timeupdate", function() {
+    console.log(audioControls.currentTime);
+});
