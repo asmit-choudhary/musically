@@ -24,11 +24,11 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(20, 20, 20, 0.5);
     border-radius: 25px;
     color: white;
     width: 350px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .hidden{
@@ -187,3 +187,11 @@ h3{
     cursor: pointer;
   }
   
+
+  .volume-container .slidecontainer, .mute-btn, .full-vol-btn{
+    display: inline;
+  }
+
+  .volume-container{
+    margin-top: 20px;
+  }

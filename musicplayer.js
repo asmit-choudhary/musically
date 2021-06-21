@@ -6,14 +6,14 @@ const songs = {
         "wallpaper":"./songs/images/21-century-Background.jpg"
     },
     "1" :{
-        "name" : "./songs/FAMOUS.mp3",
-        "artist" : "SIDHU MOOSE WALA",
+        "name" : "./songs/Famous.mp3",
+        "artist" : "Sidhu Moose Wala",
         "image": "./songs/images/Famous_480x480_1529137214.jpg",
         "wallpaper":"./songs/images/famous-sidhu-moose-wala-Background.jpg"
     },
     "2": {
-        "name" : "./songs/GIRLFRIEND.mp3",
-        "artist" : "JASS MANAK",
+        "name" : "./songs/Girlfriend.mp3",
+        "artist" : "Jass Manak",
         "image": "./songs/images/girlfriend_480x480_1550087640.jpg",
         "wallpaper":"./songs/images/girlfriend-67979567-background.jpg"
     },
@@ -36,7 +36,7 @@ const songs = {
         "wallpaper":"./songs/images/Billian-Billian-background.jpg"
     },
     "6" :{
-        "name" : "./songs/MADE IN INDIA.mp3",
+        "name" : "./songs/Made In India.mp3",
         "artist" : "Guru Randhawa",
         "image": "./songs/images/made-in-india.jpg",
         "wallpaper":"./songs/images/made-in-india-background.jpg"
@@ -48,7 +48,7 @@ const songs = {
         "wallpaper":"./songs/images/kya-baat-hai-background.jpg"
     },
     "8" :{
-        "name" : "./songs/NIRA ISHQ.mp3",
+        "name" : "./songs/Nira Ishq.mp3",
         "artist" : "Guri",
         "image": "./songs/images/nira-ishq.jpg",
         "wallpaper":"./songs/images/nira-ishq-background.jpg"
@@ -107,8 +107,8 @@ function play(source, isNext){
         audioControls.play();
         settotalTimeOfSong(source);
         // isPlaying = !isPlaying;
-        console.log(audioControls);
-        console.log("play->" + audioControls.paused);
+        // console.log(audioControls);
+        // console.log("play->" + audioControls.paused);
     }
 }
 
@@ -118,14 +118,10 @@ function pause(){
         pauseBtn.classList.add('hidden');
         audioControls.pause();
         // isPlaying = !isPlaying;
-        console.log("pause->" + audioControls.paused);
+        // console.log("pause->" + audioControls.paused);
     }
 }
 
-function settotalTimeOfSong(source){
-    let finishTime = document.querySelector("#finish-time");
-    console.log(audioControls.duration);
-}
 
 function setSongAttributes(source){
     songPic.style["background-image"] = `url(${source.image})`;
@@ -166,14 +162,14 @@ document.body.onkeydown = (evt) => {
     else if(evt.keyCode == 37){
         preTrack();
     }
-    console.log(evt.keyCode);
+    // console.log(evt.keyCode);
 }
 
 function changeVolume(evt){
     let val = evt.target.value;
-    console.log('before' + val);
+    // console.log('before' + val);
     val = val /100;
-    console.log('after' + val);
+    // console.log('after' + val);
     audioControls.volume = val;
 }
 
@@ -182,10 +178,10 @@ audioControls.addEventListener('timeupdate', () => {
 });
 
 timeRange.addEventListener('change', (evt) => {
-    console.log(evt.target.value);
+    // console.log(evt.target.value);
     timeRange.value = evt.target.value;
     audioControls.currentTime = parseInt((evt.target.value / 100) * audioControls.duration);
-    console.log(parseInt((evt.target.value / 100) * audioControls.duration));
+    // console.log(parseInt((evt.target.value / 100) * audioControls.duration));
 });
 
 window.onload = () =>{
@@ -193,5 +189,55 @@ window.onload = () =>{
 };
 
 audioControls.addEventListener("timeupdate", function() {
-    console.log(audioControls.currentTime);
+    // console.log(audioControls.currentTime);
+    // console.log("duration------->" + audioControls.duration);
+    settotalTimeOfSong();
+    setcuurentTimeOfSong();
+});
+
+function settotalTimeOfSong(){
+    if(isNaN(audioControls.duration))
+        return;
+    let finishTime = document.querySelector("#finish-time");
+    let totalTime = Math.ceil(audioControls.duration);
+    let minutes = Math.floor(totalTime / 60);
+    let seconds = totalTime - minutes * 60;
+    let minutesTick = "" + minutes;
+    let secondsTick = "" + seconds;
+    if(minutes < 10){ minutesTick = "0" + minutes;}
+    if(seconds < 10){ secondsTick = "0" + seconds;}
+    // console.log(audioControls.duration);
+    finishTime.textContent = minutesTick + ":" + secondsTick;
+}
+
+function setcuurentTimeOfSong(){
+    if(isNaN(audioControls.currentTime))
+        return;
+    let startTime = document.querySelector("#start-time");
+    let currentTime = Math.floor(audioControls.currentTime);
+    let minutes = Math.floor(currentTime / 60);
+    let seconds = currentTime - minutes * 60;
+    let minutesTick = "" + minutes;
+    let secondsTick = "" + seconds;
+    if(minutes < 10){ minutesTick = "0" + minutes;}
+    if(seconds < 10){ secondsTick = "0" + seconds;}
+    startTime.textContent = minutesTick + ":" + secondsTick;
+}
+
+document.querySelector('.mute-btn').addEventListener( 'click', (evt) =>{
+    if(audioControls.muted){
+        evt.target.style.color = 'white';
+        audioControls.muted = false;
+        return;    
+    }
+    audioControls.muted = true;
+    evt.target.style.color = 'red';
+    console.log('mute-btn');
+});
+
+document.querySelector('.full-vol-btn').addEventListener('click', (evt) =>{
+    audioControls.volume = 1;
+    //evt.target.style.color = 'dodgerBlue';
+    volumeRange.value = 100;
+    console.log('full-vol-btn');
 });

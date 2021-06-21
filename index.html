@@ -32,7 +32,7 @@
         </div>  
         <div class="sider">
             <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="1" class="slider" id="music-range">
+                <input type="range" min="1" max="100" value="0" class="slider" id="music-range">
             </div>
 
             <div class="time-range">
@@ -41,11 +41,11 @@
             </div>
         
             <div class="volume-container">
+                <i class="fa fa-volume-mute fa-lg mute-btn"></i>    
                 <div class="slidecontainer">
-                    <input type="range" min="1" max="100" value="50" class="slider volume_slider" id="volume-range" >
+                    <input type="range" min="1" max="100" value="50" class="slider volume_slider" id="volume-range" style= "width: 75%" >
                 </div>
-                <i class="fa fa-volume-mute fa-lg"></i>    
-                <i class="fa fa-volume-up fa-lg" style = "float: right;"></i>
+                <i class="fa fa-volume-up fa-lg full-vol-btn" style = "float: right;"></i>
             </div>
         </div>
         <!-- <audio controls id = "audio-controls" hidden>
