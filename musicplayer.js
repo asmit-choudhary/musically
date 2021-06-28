@@ -6,13 +6,13 @@ let songs = {
     wallpaper: "./songs/images/21-century-Background.jpg",
   },
   1: {
-    name: "./songs/Famous.mp3",
+    name: "./songs/FAMOUS.mp3",
     artist: "Sidhu Moose Wala",
     image: "./songs/images/Famous_480x480_1529137214.jpg",
     wallpaper: "./songs/images/famous-sidhu-moose-wala-Background.jpg",
   },
   2: {
-    name: "./songs/Girlfriend.mp3",
+    name: "./songs/GIRLFRIEND.mp3",
     artist: "Jass Manak",
     image: "./songs/images/girlfriend_480x480_1550087640.jpg",
     wallpaper: "./songs/images/girlfriend-67979567-background.jpg",
@@ -36,7 +36,7 @@ let songs = {
     wallpaper: "./songs/images/Billian-Billian-background.jpg",
   },
   6: {
-    name: "./songs/Made In India.mp3",
+    name: "./songs/MADE IN INDIA.mp3",
     artist: "Guru Randhawa",
     image: "./songs/images/made-in-india.jpg",
     wallpaper: "./songs/images/made-in-india-background.jpg",
@@ -48,11 +48,41 @@ let songs = {
     wallpaper: "./songs/images/kya-baat-hai-background.jpg",
   },
   8: {
-    name: "./songs/Nira Ishq.mp3",
+    name: "./songs/NIRA ISHQ.mp3",
     artist: "Guri",
     image: "./songs/images/nira-ishq.jpg",
     wallpaper: "./songs/images/nira-ishq-background.jpg",
   },
+  9: {
+    name: "./songs/Different World.m4a",
+    artist: "Alan Walker feat. Sofia Carson",
+    image: "./songs/images/Different-world.jpg",
+    wallpaper: "./songs/images/Different-world-background.jpg",
+  },
+  10: {
+    name: "./songs/On My Way.m4a",
+    artist: "Alan Wakar feat. Farruko, Sabrina Carpenter",
+    image: "./songs/images/on-my-way.jpg",
+    wallpaper: "./songs/images/on-my-way-background.jpg",
+  },
+  11: {
+    name: "./songs/Bilionera.m4a",
+    artist: "Otilia",
+    image: "./songs/images/bilionera.jpg",
+    wallpaper: "./songs/images/bilionera-background.jpg",
+  },
+  12: {
+    name: "./songs/Let Me Love You.mp3",
+    artist: "Justin Bieber feat. DJ Snake",
+    image: "./songs/images/DJ-Snake-Let-Me-Love-You.jpg",
+    wallpaper: "./songs/images/justin-bieber-background.jpg",
+  },
+  13: {
+    name: "./songs/Yummy.mp3",
+    artist: "Justin Bieber",
+    image: "./songs/images/yummy.jpg",
+    wallpaper: "./songs/images/justin-bieber-background.jpg",
+  }
 };
 
 let preOrderSongs;
@@ -108,7 +138,7 @@ function play(source, isNext) {
     let songName = source.name;
     songName = songName.substring(songName.lastIndexOf("/") + 1);
     let dotPosition = songName.lastIndexOf(".");
-    songName = songName.substring(0, dotPosition);
+    songName = capitalizeString(songName.substring(0, dotPosition));
     songNameElem.children[0].textContent = songName;
     songArtistElem.children[0].textContent = source.artist;
     if (audioControls.currentTime < 3 || isNext) {
@@ -311,4 +341,15 @@ function noRepeatTrack(){
         noRepeatSongs.classList.add("hidden");
         isRepeat = !isRepeat;
     }
+}
+
+function capitalizeString(str){
+  let newstr = "";
+  for(let i = 0; i < str.length; i++){
+    if(i==0 || str.charAt(i-1)==" "){
+        newstr += str.charAt(i).toUpperCase();
+    } 
+    else{ newstr += str.charAt(i).toLowerCase();}
+  }
+  return newstr;
 }
