@@ -19,15 +19,28 @@
             <div class="song-artist"><span style = "font-size: 1em;">Artist Name</span></div>
         </div>
         <div class="icon">
+            <div id = "loop">
+                <i class="far fa-repeat-alt" id="repeat"></i>
+                <i class="fas fa-repeat-1 hidden" id="repeat1" style="color: red;"></i>
+            </div>
             <div class="pre">
-                <i class="fa fa-backward fa-2x" id="pre-song"></i>
+                <!-- <i class="fa fa-backward fa-2x" id="pre-song"></i> -->
+                <svg width="30" height="30" viewBox="0 0 24 24" id="pre-song">
+                    <path class="fill_path" fill-rule="evenodd" d="M7.556 19.222V5H4v14.222h3.556zm12.444 0V5L9.333 12.111 20 19.222z"></path>
+                </svg>
             </div>
             <div class="play">
-                <i class="fa fa-play-circle fa-4x" id="play-btn"></i>
-                <i class="fa fa-pause-circle fa-4x hidden" id="pause-btn"></i>
+                <i class="fa fa-play-circle fa-3x" id="play-btn"></i>
+                <i class="fa fa-pause-circle fa-3x hidden" id="pause-btn"></i>
             </div>
             <div class="next">
-                <i class="fa fa-forward fa-2x" id="next-song"></i>
+                <!-- <i class="fa fa-forward fa-2x" id="next-song"></i> -->
+                <svg width="30" height="30" viewBox="0 0 24 24" id="next-song">
+                    <path class="fill_path" fill-rule="evenodd" d="M16.444 19.222V5H20v14.222h-3.556zM4 19.222V5l10.667 7.111L4 19.222z"></path>
+                </svg>
+            </div>
+            <div id = "shuffle">
+                <i class="fa fa-random" aria-hidden="true"></i>
             </div>
         </div>  
         <div class="sider">

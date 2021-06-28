@@ -7,7 +7,6 @@ body{
     width: 100vw;
 }
 .container{
-    background-image: url(drawing-mahakal-shiva-images-11605108362ayypaztuuz.jpg);
     height: 100%;
     width: 100%;
     background-origin: content-box;
@@ -54,7 +53,6 @@ body{
 .picture{
     height: 230px;
     width: 200px;
-    background-image: url(1953418.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 10%;
@@ -76,14 +74,17 @@ h3{
 
 .icon{
     display: flex;
-    display: inline;
+    /* display: inline; */
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.pre, .play, .next{
-    padding: 20px;
+
+.pre, .play, .next, #shuffle, #loop{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding: 12px;
     opacity: 0.8;
     display: inline-block;
     padding-bottom: 50px;
@@ -91,6 +92,10 @@ h3{
 
 .pre:hover, .play:hover, .next:hover{
     opacity: 1;
+}
+
+.pre, .next{
+    fill: white;
 }
 
 /* .sider{
