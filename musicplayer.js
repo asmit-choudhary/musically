@@ -109,6 +109,11 @@ const timeRange = document.querySelector("#music-range");
 const shuffleTrack = document.querySelector("#shuffle");
 const repeatSongs = document.querySelector('#repeat');
 const noRepeatSongs = document.querySelector('#repeat1');
+
+const listButten = document.querySelector(".list-btn");
+const angleUp = document.querySelector("#list-up");
+const angleDown = document.querySelector("#list-down");
+const musicList = document.querySelector(".music-list");
  
 let isPlaying = false;
 
@@ -121,6 +126,8 @@ volumeRange.addEventListener("change", changeVolume);
 shuffleTrack.addEventListener("click", shuffleSong);
 repeatSongs.addEventListener("click", repeatTrack);
 noRepeatSongs.addEventListener("click", noRepeatTrack);
+
+listButten.addEventListener('click', songsList);
 
 function playAudio() {
   play(songs[currentSong], false);
@@ -352,4 +359,11 @@ function capitalizeString(str){
     else{ newstr += str.charAt(i).toLowerCase();}
   }
   return newstr;
+}
+
+
+function songsList(){
+    angleDown.classList.toggle("hidden");
+    angleUp.classList.toggle("hidden");
+    musicList.classList.toggle("hidden");
 }

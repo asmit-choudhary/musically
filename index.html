@@ -1,70 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Music Player</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
     <link rel="shortcut icon" href="./songs/images/favicon.ico" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="frontend.css">
-</head>
-<body>
-    <div class = "container">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="frontend.css" />
+  </head>
+  <body>
+    <div class="container"></div>
+    <div class="list-container">
+      <div class="oper-close-btn">
+        <div class="title-name"><h2>Musically</h2></div>
+        <button class="list-btn">
+          <i class="fas fa-angle-up hidden" id="list-up"></i>
+          <i class="fas fa-angle-down" id="list-down"></i>
+        </button>
+        <hr />
+      </div>
+      <div class="music-list hidden">
+          <div class="music-item">
+          <div class="items">
+            <img
+              class="song-image"
+              src="./songs/images/21-Century-Mankirt-Aulakh.jpg"
+            />
+          </div>
+          <div class="contant">
+            <div class="items"><h5>21 Century</h5></div>
+            <div class="items"><h6>Mankirt Aulakh Ft. Singga</h6></div>
+          </div>
+        </div>
+        <hr />
+      </div>
     </div>
-    <div class="music">
-        <div class="about">
-            <div class="picture"></div>
-            <div class="song-name"><h1>Song name</h1></div>
-            <div class="song-artist"><span style = "font-size: 1em;">Artist Name</span></div>
-        </div>
-        <div class="icon">
-            <div id = "loop">
-                <i class="far fa-repeat-alt" id="repeat"></i>
-                <i class="fas fa-repeat-1 hidden" id="repeat1" style="color: red;"></i>
-            </div>
-            <div class="pre">
-                <!-- <i class="fa fa-backward fa-2x" id="pre-song"></i> -->
-                <svg width="30" height="30" viewBox="0 0 24 24" id="pre-song">
-                    <path class="fill_path" fill-rule="evenodd" d="M7.556 19.222V5H4v14.222h3.556zm12.444 0V5L9.333 12.111 20 19.222z"></path>
-                </svg>
-            </div>
-            <div class="play">
-                <i class="fa fa-play-circle fa-3x" id="play-btn"></i>
-                <i class="fa fa-pause-circle fa-3x hidden" id="pause-btn"></i>
-            </div>
-            <div class="next">
-                <!-- <i class="fa fa-forward fa-2x" id="next-song"></i> -->
-                <svg width="30" height="30" viewBox="0 0 24 24" id="next-song">
-                    <path class="fill_path" fill-rule="evenodd" d="M16.444 19.222V5H20v14.222h-3.556zM4 19.222V5l10.667 7.111L4 19.222z"></path>
-                </svg>
-            </div>
-            <div id = "shuffle">
-                <i class="fa fa-random" aria-hidden="true"></i>
-            </div>
-        </div>  
-        <div class="sider">
-            <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="0" class="slider" id="music-range">
-            </div>
+    <hr />
 
-            <div class="time-range">
-                <span id = "start-time">00:00</span>
-                <span id = "finish-time" style = "float: right;">00:00</span>
-            </div>
-        
-            <div class="volume-container">
-                <i class="fa fa-volume-mute fa-lg mute-btn"></i>    
-                <div class="slidecontainer">
-                    <input type="range" min="1" max="100" value="50" class="slider volume_slider" id="volume-range" style= "width: 75%" >
-                </div>
-                <i class="fa fa-volume-up fa-lg full-vol-btn" style = "float: right;"></i>
-            </div>
+    <div class="music">
+      <div class="about">
+        <div class="picture"></div>
+        <div class="song-name"><h1>Song name</h1></div>
+        <div class="song-artist">
+          <span style="font-size: 1em">Artist Name</span>
         </div>
-        <!-- <audio controls id = "audio-controls" hidden>
+      </div>
+      <div class="icon">
+        <div id="loop">
+          <i class="far fa-repeat-alt" id="repeat"></i>
+          <i class="fas fa-repeat-1 hidden" id="repeat1" style="color: red"></i>
+        </div>
+        <div class="pre">
+          <!-- <i class="fa fa-backward fa-2x" id="pre-song"></i> -->
+          <svg width="30" height="30" viewBox="0 0 24 24" id="pre-song">
+            <path
+              class="fill_path"
+              fill-rule="evenodd"
+              d="M7.556 19.222V5H4v14.222h3.556zm12.444 0V5L9.333 12.111 20 19.222z"
+            ></path>
+          </svg>
+        </div>
+        <div class="play">
+          <i class="fa fa-play-circle fa-3x" id="play-btn"></i>
+          <i class="fa fa-pause-circle fa-3x hidden" id="pause-btn"></i>
+        </div>
+        <div class="next">
+          <!-- <i class="fa fa-forward fa-2x" id="next-song"></i> -->
+          <svg width="30" height="30" viewBox="0 0 24 24" id="next-song">
+            <path
+              class="fill_path"
+              fill-rule="evenodd"
+              d="M16.444 19.222V5H20v14.222h-3.556zM4 19.222V5l10.667 7.111L4 19.222z"
+            ></path>
+          </svg>
+        </div>
+        <div id="shuffle">
+          <i class="fa fa-random" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="sider">
+        <div class="slidecontainer">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="slider"
+            id="music-range"
+          />
+        </div>
+
+        <div class="time-range">
+          <span id="start-time">00:00</span>
+          <span id="finish-time" style="float: right">00:00</span>
+        </div>
+
+        <div class="volume-container">
+          <i class="fa fa-volume-mute fa-lg mute-btn"></i>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              class="slider volume_slider"
+              id="volume-range"
+              style="width: 75%"
+            />
+          </div>
+          <i
+            class="fa fa-volume-up fa-lg full-vol-btn"
+            style="float: right"
+          ></i>
+        </div>
+      </div>
+      <!-- <audio controls id = "audio-controls" hidden>
             <source src="./songs/21 Century.mp3" type="audio/mpeg" id = "audio-player-element">
           </audio> -->
     </div>
-    <script src= "musicplayer.js"></script>
-</body>
+    <script src="musicplayer.js"></script>
+  </body>
 </html>
