@@ -246,6 +246,7 @@ h5 {
 
 .music-list {
   background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .list-container{

@@ -142,10 +142,7 @@ function play(source, isNext) {
     playBtn.classList.add("hidden");
     songPic.style["background-image"] = `url(${source.image})`;
     songPicElem.style["background-image"] = `url(${source.wallpaper})`;
-    let songName = source.name;
-    songName = songName.substring(songName.lastIndexOf("/") + 1);
-    let dotPosition = songName.lastIndexOf(".");
-    songName = capitalizeString(songName.substring(0, dotPosition));
+    let songName = extractName(source.name);
     songNameElem.children[0].textContent = songName;
     songArtistElem.children[0].textContent = source.artist;
     if (audioControls.currentTime < 3 || isNext) {
@@ -154,6 +151,7 @@ function play(source, isNext) {
     }
     audioControls.play();
     settotalTimeOfSong(source);
+    console.log("Playing");
     // isPlaying = !isPlaying;
     // console.log(audioControls);
     // console.log("play->" + audioControls.paused);
@@ -170,6 +168,16 @@ function pause() {
   }
 }
 
+/**
+ * Extracts name from the location address of the song.
+ */
+function extractName(location){
+    let songName = location;
+    songName = songName.substring(songName.lastIndexOf("/") + 1);
+    let dotPosition = songName.lastIndexOf(".");
+    return capitalizeString(songName.substring(0, dotPosition));
+}
+
 function setSongAttributes(source) {
   songPic.style["background-image"] = `url(${source.image})`;
   songPicElem.style["background-image"] = `url(${source.wallpaper})`;
@@ -181,9 +189,9 @@ function setSongAttributes(source) {
   songArtistElem.children[0].textContent = source.artist;
 }
 
-function nextTrack() {
+function nextTrack(evt, current = currentSong) {
   pause();
-  currentSong = (currentSong + 1) % Object.keys(songs).length;
+  currentSong = (current + 1) % Object.keys(songs).length;
   play(songs[currentSong], true);
 }
 
@@ -202,7 +210,7 @@ document.body.onkeydown = (evt) => {
   } else if (evt.keyCode == 32) {
     playAudio();
   } else if (evt.keyCode == 39) {
-    nextTrack();
+    nextTrack(currentSong);
   } else if (evt.keyCode == 37) {
     preTrack();
   }
@@ -319,15 +327,17 @@ function shuffleSong(arr) {
     for (let i = 0; i < size; i++) {
       tempSongs[i] = songs[shuffledarr[i]];
     }
+    addMusicCells(tempSongs);
     console.log(tempSongs);
     preOrderSongs = songs;
     songs = tempSongs;
     isShuffled = !isShuffled;
   }
   else{
-        shuffleBtn.style.color = "white";
+      shuffleBtn.style.color = "white";
       songs = preOrderSongs; 
       isShuffled = !isShuffled;
+      addMusicCells(songs);
   }
 
   // console.log(arr);
@@ -367,3 +377,37 @@ function songsList(){
     angleUp.classList.toggle("hidden");
     musicList.classList.toggle("hidden");
 }
+
+
+function playListSong(current){
+  currentSong = current;
+  nextTrack(current-1);
+
+}
+
+function musicCellTemplate(key, image, name, artist){
+    return  `<div class="music-item" onclick = "playListSong(${key})">
+                <div class="items">
+                  <img
+                    class="song-image"
+                    src= ${image}
+                  />
+                </div>
+                <div class="contant">
+                  <div class="items"><h5>${name}</h5></div>
+                  <div class="items"><h6>${artist}</h6></div>
+                </div>
+              </div>
+              <hr />`
+}
+
+function addMusicCells(songs){
+  musicList.innerHTML = "";
+  for (const [key, value] of Object.entries(songs)) {
+    // currentSong = key; 
+    musicList.innerHTML += musicCellTemplate(key, value.image, extractName(value.name) , value.artist);
+
+  }
+};
+
+addMusicCells(songs);
