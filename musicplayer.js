@@ -380,9 +380,8 @@ function songsList(){
 
 
 function playListSong(current){
-  currentSong = current;
+  currentSong = current-1;
   nextTrack(current-1);
-
 }
 
 function musicCellTemplate(key, image, name, artist){
