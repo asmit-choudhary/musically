@@ -82,7 +82,7 @@ let songs = {
     artist: "Justin Bieber",
     image: "./songs/images/yummy.jpg",
     wallpaper: "./songs/images/justin-bieber-background.jpg",
-  }
+  },
 };
 
 let preOrderSongs;
@@ -107,14 +107,14 @@ const audioPlayerElem = document.querySelector("#audio-player-element");
 const volumeRange = document.querySelector("#volume-range");
 const timeRange = document.querySelector("#music-range");
 const shuffleTrack = document.querySelector("#shuffle");
-const repeatSongs = document.querySelector('#repeat');
-const noRepeatSongs = document.querySelector('#repeat1');
+const repeatSongs = document.querySelector("#repeat");
+const noRepeatSongs = document.querySelector("#repeat1");
 
 const listButten = document.querySelector(".list-btn");
 const angleUp = document.querySelector("#list-up");
 const angleDown = document.querySelector("#list-down");
 const musicList = document.querySelector(".music-list");
- 
+
 let isPlaying = false;
 
 playBtn.addEventListener("click", playAudio);
@@ -127,7 +127,7 @@ shuffleTrack.addEventListener("click", shuffleSong);
 repeatSongs.addEventListener("click", repeatTrack);
 noRepeatSongs.addEventListener("click", noRepeatTrack);
 
-listButten.addEventListener('click', songsList);
+listButten.addEventListener("click", songsList);
 
 function playAudio() {
   play(songs[currentSong], false);
@@ -135,9 +135,9 @@ function playAudio() {
 
 function play(source, isNext) {
   if (audioControls.paused) {
-    if(isRepeat){
-       currentTime = 0; 
-    }    
+    if (isRepeat) {
+      currentTime = 0;
+    }
     pauseBtn.classList.remove("hidden");
     playBtn.classList.add("hidden");
     songPic.style["background-image"] = `url(${source.image})`;
@@ -171,11 +171,11 @@ function pause() {
 /**
  * Extracts name from the location address of the song.
  */
-function extractName(location){
-    let songName = location;
-    songName = songName.substring(songName.lastIndexOf("/") + 1);
-    let dotPosition = songName.lastIndexOf(".");
-    return capitalizeString(songName.substring(0, dotPosition));
+function extractName(location) {
+  let songName = location;
+  songName = songName.substring(songName.lastIndexOf("/") + 1);
+  let dotPosition = songName.lastIndexOf(".");
+  return capitalizeString(songName.substring(0, dotPosition));
 }
 
 function setSongAttributes(source) {
@@ -309,7 +309,7 @@ let isShuffled = false;
 function shuffleSong(arr) {
   let shuffledarr = [];
   let size = Object.keys(songs).length;
-  let shuffleBtn = document.querySelector('#shuffle');
+  let shuffleBtn = document.querySelector("#shuffle");
   if (!isShuffled) {
     shuffleBtn.style.color = "#e72c30";
     for (let i = 0; i < size; i++) shuffledarr.push(i);
@@ -332,60 +332,58 @@ function shuffleSong(arr) {
     preOrderSongs = songs;
     songs = tempSongs;
     isShuffled = !isShuffled;
-  }
-  else{
-      shuffleBtn.style.color = "white";
-      songs = preOrderSongs; 
-      isShuffled = !isShuffled;
-      addMusicCells(songs);
+  } else {
+    shuffleBtn.style.color = "white";
+    songs = preOrderSongs;
+    isShuffled = !isShuffled;
+    addMusicCells(songs);
   }
 
   // console.log(arr);
 }
 
-function repeatTrack(){
-    if(!isRepeat){
-        repeatSongs.classList.add("hidden");
-        noRepeatSongs.classList.remove("hidden");
-        currentSong--;
-        isRepeat = !isRepeat;
-    }
+function repeatTrack() {
+  if (!isRepeat) {
+    repeatSongs.classList.add("hidden");
+    noRepeatSongs.classList.remove("hidden");
+    currentSong--;
+    isRepeat = !isRepeat;
+  }
 }
 
-function noRepeatTrack(){
-    if(isRepeat){
-        repeatSongs.classList.remove("hidden");
-        noRepeatSongs.classList.add("hidden");
-        isRepeat = !isRepeat;
-    }
+function noRepeatTrack() {
+  if (isRepeat) {
+    repeatSongs.classList.remove("hidden");
+    noRepeatSongs.classList.add("hidden");
+    isRepeat = !isRepeat;
+  }
 }
 
-function capitalizeString(str){
+function capitalizeString(str) {
   let newstr = "";
-  for(let i = 0; i < str.length; i++){
-    if(i==0 || str.charAt(i-1)==" "){
-        newstr += str.charAt(i).toUpperCase();
-    } 
-    else{ newstr += str.charAt(i).toLowerCase();}
+  for (let i = 0; i < str.length; i++) {
+    if (i == 0 || str.charAt(i - 1) == " ") {
+      newstr += str.charAt(i).toUpperCase();
+    } else {
+      newstr += str.charAt(i).toLowerCase();
+    }
   }
   return newstr;
 }
 
-
-function songsList(){
-    angleDown.classList.toggle("hidden");
-    angleUp.classList.toggle("hidden");
-    musicList.classList.toggle("hidden");
+function songsList() {
+  angleDown.classList.toggle("hidden");
+  angleUp.classList.toggle("hidden");
+  musicList.classList.toggle("hidden");
 }
 
-
-function playListSong(current){
-  currentSong = current-1;
-  nextTrack(current-1);
+function playListSong(current) {
+  currentSong = current - 1;
+  nextTrack(current - 1);
 }
 
-function musicCellTemplate(key, image, name, artist){
-    return  `<div class="music-item" onclick = "playListSong(${key})">
+function musicCellTemplate(key, image, name, artist) {
+  return `<div class="music-item" onclick = "playListSong(${key})">
                 <div class="items">
                   <img
                     class="song-image"
@@ -396,17 +394,33 @@ function musicCellTemplate(key, image, name, artist){
                   <div class="items"><h5>${name}</h5></div>
                   <div class="items"><h6>${artist}</h6></div>
                 </div>
-              </div>
-              <hr />`
+              </div>`;
 }
 
-function addMusicCells(songs){
+function addMusicCells(songs) {
   musicList.innerHTML = "";
   for (const [key, value] of Object.entries(songs)) {
-    // currentSong = key; 
-    musicList.innerHTML += musicCellTemplate(key, value.image, extractName(value.name) , value.artist);
-
+    // currentSong = key;
+    musicList.innerHTML += musicCellTemplate(key, value.image, extractName(value.name), wordShortner(value.artist));
   }
-};
+}
 
 addMusicCells(songs);
+
+function wordShortner(word) {
+  return word.length < 35? word : word.substr(0,35) + "...";
+}
+
+
+/**
+ * Happy
+ * Sad 
+ * Angry
+ * Meditative
+ * Depressed
+ * High
+ * Neutral -> Normal all songs
+ * Joyfull
+ * Sporty
+ * Romantic
+ */

@@ -206,7 +206,6 @@ h3 {
 .song-image {
   height: 50px;
   width: 50px;
-  padding-bottom: 5px;
 }
 
 .music-list {
@@ -233,6 +232,12 @@ h3 {
   flex-direction:inherit;
   align-items:flex-start;
   justify-content: left;
+  /* border: 1px solid red; */
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  background-color: rgba(40,44,52,0.4);
+  /* box-shadow:0 29px 19px -14px rgba(0, 0, 0, 0.9); */
 }
 
 h6 {
@@ -253,6 +258,30 @@ h5 {
     position: absolute;
     top: 0px;
     z-index: 5000;
+}
+
+.mood-list{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+#moods{
+  background-color: rgba(0, 0, 0, 1);
+  width: 10vw;
+  text-align: center;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+option{
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 20px;
 }
 
 @media only screen and (max-width: 400px) {
