@@ -1,84 +1,84 @@
 let songs = {
   0: {
-    name: "./songs/21 Century.mp3",
+    name: "./songs/Songs/Normal/21 Century.mp3",
     artist: "Mankirt Aulakh Ft. Singga",
     image: "./songs/images/21-Century-Mankirt-Aulakh.jpg",
     wallpaper: "./songs/images/21-century-Background.jpg",
   },
   1: {
-    name: "./songs/FAMOUS.mp3",
+    name: "./songs/Songs/Normal/FAMOUS.mp3",
     artist: "Sidhu Moose Wala",
     image: "./songs/images/Famous_480x480_1529137214.jpg",
     wallpaper: "./songs/images/famous-sidhu-moose-wala-Background.jpg",
   },
   2: {
-    name: "./songs/GIRLFRIEND.mp3",
-    artist: "Jass Manak",
+    name: "./songs/Songs/Normal/GIRLFRIEND.mp3",
+    artist: "Jass Manak", 
     image: "./songs/images/girlfriend_480x480_1550087640.jpg",
     wallpaper: "./songs/images/girlfriend-67979567-background.jpg",
   },
   3: {
-    name: "./songs/Sorry.mp3",
+    name: "./songs/Songs/Normal/Sorry.mp3",
     artist: "Justin Bieber",
     image: "./songs/images/sorry-b375f19b271aa690b075749e76d9b4e9.jpg",
     wallpaper: "./songs/images/justin-bieber-background.jpg",
   },
   4: {
-    name: "./songs/Dil Mein Ho Tum.mp3",
+    name: "./songs/Songs/Normal/Dil Mein Ho Tum.mp3",
     artist: "Armaan Malik",
     image: "./songs/images/Dil-mein-ho-tum.jpg",
     wallpaper: "./songs/images/Dil-Mein-Ho-Tum-Song-Lyrics-background.jpg",
   },
   5: {
-    name: "./songs/Billian Billian.mp3",
+    name: "./songs/Songs/Normal/Billian Billian.mp3",
     artist: "Guri",
     image: "./songs/images/Billian-Billian.jpg",
     wallpaper: "./songs/images/Billian-Billian-background.jpg",
   },
   6: {
-    name: "./songs/MADE IN INDIA.mp3",
+    name: "./songs/Songs/Normal/MADE IN INDIA.mp3",
     artist: "Guru Randhawa",
     image: "./songs/images/made-in-india.jpg",
     wallpaper: "./songs/images/made-in-india-background.jpg",
   },
   7: {
-    name: "./songs/Kya Baat hai.mp3",
+    name: "./songs/Songs/Normal/Kya Baat hai.mp3",
     artist: "Harrdy Sandhu ",
     image: "./songs/images/kya-baat-hai.jpg",
     wallpaper: "./songs/images/kya-baat-hai-background.jpg",
   },
   8: {
-    name: "./songs/NIRA ISHQ.mp3",
+    name: "./songs/Songs/Normal/NIRA ISHQ.mp3",
     artist: "Guri",
     image: "./songs/images/nira-ishq.jpg",
     wallpaper: "./songs/images/nira-ishq-background.jpg",
   },
   9: {
-    name: "./songs/Different World.m4a",
+    name: "./songs/Songs/Normal/Different World.m4a",
     artist: "Alan Walker feat. Sofia Carson",
     image: "./songs/images/Different-world.jpg",
     wallpaper: "./songs/images/Different-world-background.jpg",
   },
   10: {
-    name: "./songs/On My Way.m4a",
+    name: "./songs/Songs/Normal/On My Way.m4a",
     artist: "Alan Wakar feat. Farruko, Sabrina Carpenter",
     image: "./songs/images/on-my-way.jpg",
     wallpaper: "./songs/images/on-my-way-background.jpg",
   },
   11: {
-    name: "./songs/Bilionera.m4a",
+    name: "./songs/Songs/Normal/Bilionera.m4a",
     artist: "Otilia",
     image: "./songs/images/bilionera.jpg",
     wallpaper: "./songs/images/bilionera-background.jpg",
   },
   12: {
-    name: "./songs/Let Me Love You.mp3",
+    name: "./songs/Songs/Normal/Let Me Love You.mp3",
     artist: "Justin Bieber feat. DJ Snake",
     image: "./songs/images/DJ-Snake-Let-Me-Love-You.jpg",
     wallpaper: "./songs/images/justin-bieber-background.jpg",
   },
   13: {
-    name: "./songs/Yummy.mp3",
+    name: "./songs/Songs/Normal/Yummy.mp3",
     artist: "Justin Bieber",
     image: "./songs/images/yummy.jpg",
     wallpaper: "./songs/images/justin-bieber-background.jpg",
@@ -115,6 +115,8 @@ const angleUp = document.querySelector("#list-up");
 const angleDown = document.querySelector("#list-down");
 const musicList = document.querySelector(".music-list");
 
+const moodList = document.querySelector(".moods");
+
 let isPlaying = false;
 
 playBtn.addEventListener("click", playAudio);
@@ -128,6 +130,8 @@ repeatSongs.addEventListener("click", repeatTrack);
 noRepeatSongs.addEventListener("click", noRepeatTrack);
 
 listButten.addEventListener("click", songsList);
+
+moodList.addEventListener("change", moodListChanger);
 
 function playAudio() {
   play(songs[currentSong], false);
@@ -412,10 +416,45 @@ function wordShortner(word) {
 }
 
 
+function moodListChanger(evt){
+  console.log("changed....");
+  let mood = evt.target.value;
+  console.log(mood);
+  switch(mood){
+      case "happy": songs = HAPPY;
+                    addMusicCells(songs);
+                    break;
+      case "normal": songs = NORMAL;
+                     addMusicCells(songs);
+                     break;
+      case "sad": songs = SAD;
+                  addMusicCells(songs);
+                  break;
+      case "study": songs = STUDY;
+                    addMusicCells(songs);
+                    break;
+      case "high": songs = HIGH;
+                   addMusicCells(songs);
+                   break;
+      case "joyfull": songs = JOYFULL;
+                      addMusicCells(songs);
+                      break;
+      case "sporty": songs = SPORTY;
+                      addMusicCells(songs);
+                      break;
+      case "romantic": songs = ROMANTIC;
+                       addMusicCells(songs);
+                       break;
+      case "aggressive": songs = AGGRESSIVE;
+                         addMusicCells(songs);
+                         break;            
+  }
+}
+
+
 /**
  * Happy
  * Sad 
- * Angry
  * Meditative
  * Depressed
  * High
@@ -423,4 +462,5 @@ function wordShortner(word) {
  * Joyfull
  * Sporty
  * Romantic
+ * Aggressive
  */

@@ -19,10 +19,16 @@
     <div class="list-container">
       <div class="oper-close-btn">
         <div class="title-name"><h2>Musically</h2></div>
-        <button class="list-btn">
-          <i class="fas fa-angle-up hidden" id="list-up"></i>
-          <i class="fas fa-angle-down" id="list-down"></i>
-        </button>
+        <div class="select-items">
+          <button class="mood-list-mobile hidden">😀
+            <i class="fas fa-angle-down"></i>
+          </button>
+          
+          <button class="list-btn">
+            <i class="fas fa-angle-up hidden" id="list-up"></i>
+            <i class="fas fa-angle-down" id="list-down"></i>
+          </button>
+      </div>
         <hr />
       </div>
       <div class="music-list hidden">
@@ -114,20 +120,20 @@
     </div>
 
     <div class="mood-list">
-      <select name="moods" id="moods">
+      <select name="moods" class="moods">
         <option value="normal">😶 Normal</option>
         <option value="happy">😁 Happy</option>
         <option value="sad">😭 Sad</option>
-        <option value="angry">😡 Angry</option>
         <option value="study">📚 Study</option>
         <option value="high">😎 High</option>
         <option value="joyfull">🤣 JoyFull</option>
         <option value="sporty">🚴‍♀️ Sporty</option>
         <option value="romantic">😍 Romantic</option>
-        <option value="aggresive">🤬 Aggresive</option>
+        <option value="aggressive">🤬 Aggressive</option>
       </select>
     </div>
 
+    <script src="songs.js"></script>
     <script src="musicplayer.js"></script>
   </body>
 </html>
