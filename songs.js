@@ -151,7 +151,7 @@ const NORMAL = {
       },
     25: {
         name: "./songs/Songs/Aggressive/BOLO HAR HAR HAR.m4a",
-        artist: "Mithoon, Badshah",
+        artist: "Badshah",
         image: "./songs/images/bolo-har-har-har.jpg",
         wallpaper: "./songs/images/bolo-har-har-har-background.jpg",
       },
@@ -202,6 +202,72 @@ const NORMAL = {
         artist: "Sidhu Moose Wala",
         image: "./songs/images/devil.jpg",
         wallpaper: "./songs/images/devil-background.jpg",
+      },
+    34: {
+        name: "./songs/Songs/Sad/Tum Hi Ho.m4a",
+        artist: "Arijit Singh",
+        image: "./songs/images/tum-hi-ho.jpg",
+        wallpaper: "./songs/images/tum-hi-ho-background.jpg",
+      },
+    35: {
+        name: "./songs/Songs/Sad/Dooja Pyaar.m4a",
+        artist: "Akhil",
+        image: "./songs/images/dooja-pyaar.jpg",
+        wallpaper: "./songs/images/dooja-pyaar-background.jpg",
+      },
+    36: {
+        name: "./songs/Songs/Sad/Pachtaoge.m4a",
+        artist: "Arijit Singh",
+        image: "./songs/images/Pachtaoge.jpg",
+        wallpaper: "./songs/images/Pachtaoge-background.jpg",
+      },
+    37: {
+        name: "./songs/Songs/Sad/Dhokha.m4a",
+        artist: "Ninja",
+        image: "./songs/images/dhokha.jpg",
+        wallpaper: "./songs/images/dhokha-background.jpg",
+      },
+    38: {
+        name: "./songs/Songs/Sad/DOORIYAN.m4a",
+        artist: "Guri",
+        image: "./songs/images/dooriyan.jpg",
+        wallpaper: "./songs/images/dooriyan-background.jpg",
+      },
+    39: {
+        name: "./songs/Songs/Sad/Filhaal2 Mohabbat.m4a",
+        artist: "B Praak",
+        image: "./songs/images/fillal2.jpg",
+        wallpaper: "./songs/images/filhaal-2.jpg",
+      },
+    40: {
+        name: "./songs/Songs/Sad/FILHALL.m4a",
+        artist: "B Praak",
+        image: "./songs/images/fillal.webp",
+        wallpaper: "./songs/images/filhaal-2.jpg",
+      },
+    41: {
+        name: "./songs/Songs/Sad/Bhul Javange.m4a",
+        artist: "Sanam Parowal",
+        image: "./songs/images/bhul-javanga.webp",
+        wallpaper: "./songs/images/bhul-javanga-background.jpg",
+      },
+    42: {
+        name: "./songs/Songs/Sad/What Do You Mean.m4a",
+        artist: "Justin Bieber",
+        image: "./songs/images/what-do-you-mean.jpg",
+        wallpaper: "./songs/images/justin-bieber-background.jpg",
+      },
+    43: {
+        name: "./songs/Songs/Sad/Thodi Jagah.m4a",
+        artist: "Arijit Singh, Tanishk Bagchi",
+        image: "./songs/images/thodi-jagah.webp",
+        wallpaper: "./songs/images/thodi-jagah-background.jpg",
+      },
+    44: {
+        name: "./songs/Songs/Sad/Phir Bhi Tumko Chaahunga.m4a",
+        artist: "Arijit Singh",
+        image: "./songs/images/phir-bhi-tumko-chaahunga.jpg",
+        wallpaper: "./songs/images/phir-bhi-tumko-chaahunga-background.jpg",
       }
 };
 
@@ -268,7 +334,7 @@ const HAPPY = {
       },
     10: {
         name: "./songs/Songs/Happy/Aankh Marey.m4a",
-        artist: "Tanishk Bagchi, Mika Singh, NehaKakkar",
+        artist: "Tanishk Bagchi, Mika Singh, Neha Kakkar",
         image: "./songs/images/aankh-marey.jpg",
         wallpaper: "./songs/images/aankh-marey-background.jpg",
       }
@@ -276,16 +342,70 @@ const HAPPY = {
 
 const SAD = {
     0: {
-        name: "./songs/Sorry.mp3",
-        artist: "Justin Bieber",
-        image: "./songs/images/sorry-b375f19b271aa690b075749e76d9b4e9.jpg",
-        wallpaper: "./songs/images/justin-bieber-background.jpg",
+        name: "./songs/Songs/Sad/Tum Hi Ho.m4a",
+        artist: "Arijit Singh",
+        image: "./songs/images/tum-hi-ho.jpg",
+        wallpaper: "./songs/images/tum-hi-ho-background.jpg",
       },
     1: {
-        name: "./songs/Dil Mein Ho Tum.mp3",
-        artist: "Armaan Malik",
-        image: "./songs/images/Dil-mein-ho-tum.jpg",
-        wallpaper: "./songs/images/Dil-Mein-Ho-Tum-Song-Lyrics-background.jpg",
+        name: "./songs/Songs/Sad/Dooja Pyaar.m4a",
+        artist: "Akhil",
+        image: "./songs/images/dooja-pyaar.jpg",
+        wallpaper: "./songs/images/dooja-pyaar-background.jpg",
+      },
+    2: {
+        name: "./songs/Songs/Sad/Pachtaoge.m4a",
+        artist: "Arijit Singh",
+        image: "./songs/images/Pachtaoge.jpg",
+        wallpaper: "./songs/images/Pachtaoge-background.jpg",
+      },
+    3: {
+        name: "./songs/Songs/Sad/Dhokha.m4a",
+        artist: "Ninja",
+        image: "./songs/images/dhokha.jpg",
+        wallpaper: "./songs/images/dhokha-background.jpg",
+      },
+    4: {
+        name: "./songs/Songs/Sad/DOORIYAN.m4a",
+        artist: "Guri",
+        image: "./songs/images/dooriyan.jpg",
+        wallpaper: "./songs/images/dooriyan-background.jpg",
+      },
+    5: {
+        name: "./songs/Songs/Sad/Filhaal2 Mohabbat.m4a",
+        artist: "B Praak",
+        image: "./songs/images/fillal2.jpg",
+        wallpaper: "./songs/images/filhaal-2.jpg",
+      },
+    6: {
+        name: "./songs/Songs/Sad/FILHALL.m4a",
+        artist: "B Praak",
+        image: "./songs/images/fillal.webp",
+        wallpaper: "./songs/images/filhaal-2.jpg",
+      },
+    7: {
+        name: "./songs/Songs/Sad/Bhul Javange.m4a",
+        artist: "Sanam Parowal",
+        image: "./songs/images/bhul-javanga.webp",
+        wallpaper: "./songs/images/bhul-javanga-background.jpg",
+      },
+    8: {
+        name: "./songs/Songs/Sad/What Do You Mean.m4a",
+        artist: "Justin Bieber",
+        image: "./songs/images/what-do-you-mean.jpg",
+        wallpaper: "./songs/images/justin-bieber-background.jpg",
+      },
+    9: {
+        name: "./songs/Songs/Sad/Thodi Jagah.m4a",
+        artist: "Arijit Singh, Tanishk Bagchi",
+        image: "./songs/images/thodi-jagah.webp",
+        wallpaper: "./songs/images/thodi-jagah-background.jpg",
+      },
+    10: {
+        name: "./songs/Songs/Sad/Phir Bhi Tumko Chaahunga.m4a",
+        artist: "Arijit Singh",
+        image: "./songs/images/phir-bhi-tumko-chaahunga.jpg",
+        wallpaper: "./songs/images/phir-bhi-tumko-chaahunga-background.jpg",
       }
 };
 
@@ -373,7 +493,7 @@ const AGGRESSIVE = {
   },
 1: {
     name: "./songs/Songs/Aggressive/BOLO HAR HAR HAR.m4a",
-    artist: "Mithoon, Badshah",
+    artist: "Badshah",
     image: "./songs/images/bolo-har-har-har.jpg",
     wallpaper: "./songs/images/bolo-har-har-har-background.jpg",
   },
