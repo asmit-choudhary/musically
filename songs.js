@@ -268,6 +268,54 @@ const NORMAL = {
         artist: "Arijit Singh",
         image: "./songs/images/phir-bhi-tumko-chaahunga.jpg",
         wallpaper: "./songs/images/phir-bhi-tumko-chaahunga-background.jpg",
+      },
+    45: {
+        name: "./songs/Songs/Romantic/Bekhayali.m4a",
+        artist: "Sachet Parampara", 
+        image: "./songs/images/bekhayali.webp",
+        wallpaper: "./songs/images/bekhayali-background.jpg",
+      },
+    46: {
+        name: "./songs/Songs/Romantic/KHAIRIYAT.m4a",
+        artist: "Arijit Singh", 
+        image: "./songs/images/KHAIRIYAT.jpg",
+        wallpaper: "./songs/images/KHAIRIYAT-background.jpg",
+      },
+    47: {
+        name: "./songs/Songs/Romantic/Tum Hi Aana.m4a",
+        artist: "Jubin Nautiyal", 
+        image: "./songs/images/Tum-Hi-Aana.webp",
+        wallpaper: "./songs/images/Tum-Hi-Aana-background.jpg",
+      },
+    48: {
+        name: "./songs/Songs/Romantic/Moonlight.mp3",
+        artist: "Harnoor",
+        image: "./songs/images/Moonlight.jpg",
+        wallpaper: "./songs/images/Moonlight-background.jpg",
+      },
+    49: {
+        name: "./songs/Songs/Romantic/Nishaan.mp3",
+        artist: "Kaka, Deep Prince",
+        image: "./songs/images/Nishaan.jpg",
+        wallpaper: "./songs/images/Nishaan-background.jpg",
+      },
+    50: {
+        name: "./songs/Songs/Romantic/Never Love Again.m4a",
+        artist: "Selena Gomez, ZAYN", 
+        image: "./songs/images/Never-Love-Again.jpg",
+        wallpaper: "./songs/images/Never-Love-Again.jpg",
+      },
+    51: {
+        name: "./songs/Songs/Romantic/Temporary Pyar.mp3",
+        artist: "Adaab Kharoud, Kaka",
+        image: "./songs/images/Temporary-Pyar.jpg",
+        wallpaper: "./songs/images/Temporary-Pyar-background.jpg",
+      },
+    52: {
+        name: "./songs/Songs/Romantic/Waalian.mp3",
+        artist: "Harnoor", 
+        image: "./songs/images/Waalian.jpg",
+        wallpaper: "./songs/images/Waalian-background.jpg",
       }
 };
 
@@ -471,16 +519,70 @@ const SPORTY = {
 
 const ROMANTIC = {
     0: {
-        name: "./songs/GIRLFRIEND.mp3",
-        artist: "Jass Manak", 
-        image: "./songs/images/girlfriend_480x480_1550087640.jpg",
-        wallpaper: "./songs/images/girlfriend-67979567-background.jpg",
+        name: "./songs/Songs/Romantic/Bekhayali.m4a",
+        artist: "Sachet Parampara", 
+        image: "./songs/images/bekhayali.webp",
+        wallpaper: "./songs/images/bekhayali-background.jpg",
       },
     1: {
-        name: "./songs/NIRA ISHQ.mp3",
+        name: "./songs/Songs/Normal/Dil Mein Ho Tum.mp3",
+        artist: "Armaan Malik",
+        image: "./songs/images/Dil-mein-ho-tum.jpg",
+        wallpaper: "./songs/images/Dil-Mein-Ho-Tum-Song-Lyrics-background.jpg",
+      },
+    2: {
+        name: "./songs/Songs/Romantic/KHAIRIYAT.m4a",
+        artist: "Arijit Singh", 
+        image: "./songs/images/KHAIRIYAT.jpg",
+        wallpaper: "./songs/images/KHAIRIYAT-background.jpg",
+      },
+    3: {
+        name: "./songs/Songs/Normal/Let Me Love You.mp3",
+        artist: "Justin Bieber feat. DJ Snake",
+        image: "./songs/images/DJ-Snake-Let-Me-Love-You.jpg",
+        wallpaper: "./songs/images/justin-bieber-background.jpg",
+      },
+    4: {
+        name: "./songs/Songs/Romantic/Tum Hi Aana.m4a",
+        artist: "Jubin Nautiyal", 
+        image: "./songs/images/Tum-Hi-Aana.webp",
+        wallpaper: "./songs/images/Tum-Hi-Aana-background.jpg",
+      },
+    5: {
+        name: "./songs/Songs/Romantic/Moonlight.mp3",
+        artist: "Harnoor",
+        image: "./songs/images/Moonlight.jpg",
+        wallpaper: "./songs/images/Moonlight-background.jpg",
+      },
+    6: {
+        name: "./songs/Songs/Romantic/NIRA ISHQ.mp3",
         artist: "Guri",
         image: "./songs/images/nira-ishq.jpg",
         wallpaper: "./songs/images/nira-ishq-background.jpg",
+      },
+    7: {
+        name: "./songs/Songs/Romantic/Nishaan.mp3",
+        artist: "Kaka, Deep Prince",
+        image: "./songs/images/Nishaan.jpg",
+        wallpaper: "./songs/images/Nishaan-background.jpg",
+      },
+    8: {
+        name: "./songs/Songs/Romantic/Never Love Again.m4a",
+        artist: "Selena Gomez, ZAYN", 
+        image: "./songs/images/Never-Love-Again.jpg",
+        wallpaper: "./songs/images/Never-Love-Again.jpg",
+      },
+    9: {
+        name: "./songs/Songs/Romantic/Temporary Pyar.mp3",
+        artist: "Adaab Kharoud, Kaka",
+        image: "./songs/images/Temporary-Pyar.jpg",
+        wallpaper: "./songs/images/Temporary-Pyar-background.jpg",
+      },
+    10: {
+        name: "./songs/Songs/Romantic/Waalian.mp3",
+        artist: "Harnoor", 
+        image: "./songs/images/Waalian.jpg",
+        wallpaper: "./songs/images/Waalian-background.jpg",
       }
 };
 
