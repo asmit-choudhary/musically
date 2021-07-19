@@ -654,3 +654,72 @@ const AGGRESSIVE = {
     wallpaper: "./songs/images/devil-background.jpg",
   }
 };
+
+const RAP = {
+  0:{
+    name: "./songs/Songs/Rap/Angaar.m4a",
+    artist: "IKKA Ft. Raftaar",
+    image: "./songs/images/devil.jpg",
+    wallpaper: "./songs/images/devil-background.jpg", 
+  },
+  1:{
+    name: "./songs/Songs/Rap/BAAP SE.m4a",
+    artist: "Fotty Seven ft. Krsna",
+    image: "./songs/images/devil.jpg",
+    wallpaper: "./songs/images/devil-background.jpg", 
+  },
+  2:{
+    name: "./songs/Songs/Rap/GODZILLA.m4a",
+    artist: "Karma",
+    image: "./songs/images/devil.jpg",
+    wallpaper: "./songs/images/devil-background.jpg", 
+  },
+  3:{
+    name: "./songs/Songs/Rap/MAKASAM.m4a",
+    artist: "Krsna",
+    image: "./songs/images/devil.jpg",
+    wallpaper: "./songs/images/devil-background.jpg", 
+  },
+  4:{
+    name: "./songs/Songs/Rap/Roll Up.m4a",
+    artist: "Krsna ft. Badshah",
+    image: "./songs/images/devil.jpg",
+    wallpaper: "./songs/images/devil-background.jpg", 
+  },
+  5:{
+    name: "./songs/Songs/Rap/Villain.m4a",
+    artist: "Krsna Ft. Karma, IKKA",
+    image: "./songs/images/devil.jpg",
+    wallpaper: "./songs/images/devil-background.jpg", 
+  },
+  6:{
+    name: "./songs/Songs/Rap/Saza-E-Maut.m4a",
+    artist: "Krsna Ft. Raftaar",
+    image: "./songs/images/devil.jpg",
+    wallpaper: "./songs/images/devil-background.jpg", 
+  },
+  7:{
+    name: "./songs/Songs/Rap/Living Legend.m4a",
+    artist: "Krsna Ft. Rashmeet Kaur",
+    image: "./songs/images/devil.jpg",
+    wallpaper: "./songs/images/devil-background.jpg", 
+  },
+  8:{
+    name: "./songs/Songs/Rap/VYANJAN.m4a",
+    artist: "Krsna",
+    image: "./songs/images/devil.jpg",
+    wallpaper: "./songs/images/devil-background.jpg", 
+  },
+  9:{
+    name: "./songs/Songs/Rap/SHEIKH CHILLI.m4a",
+    artist: "Raftaar",
+    image: "./songs/images/devil.jpg",
+    wallpaper: "./songs/images/devil-background.jpg", 
+  },
+  10:{
+    name: "./songs/Songs/Rap/We Rollin.m4a",
+    artist: "Sukhe, Deep Jandu, Shrey Sean, J Hind",
+    image: "./songs/images/devil.jpg",
+    wallpaper: "./songs/images/devil-background.jpg", 
+  },
+};
