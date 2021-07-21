@@ -570,16 +570,70 @@ const JOYFULL = {
 
 const SPORTY = {
     0: {
-        name: "./songs/Bilionera.m4a",
-        artist: "Otilia",
-        image: "./songs/images/bilionera.jpg",
-        wallpaper: "./songs/images/bilionera-background.jpg",
+        name: "./songs/Songs/Sporty/BESABRIYAAN.m4a",
+        artist: "Armaan Malik",
+        image: "./songs/images/BESABRIYAAN.jpg",
+        wallpaper: "./songs/images/BESABRIYAAN-background.jpg",
       },
     1: {
-        name: "./songs/Billian Billian.mp3",
-        artist: "Guri",
-        image: "./songs/images/Billian-Billian.jpg",
-        wallpaper: "./songs/images/Billian-Billian-background.jpg",
+        name: "./songs/Songs/Sporty/Bhaag Milkha Bhaag.m4a",
+        artist: "Siddharth Mahadevan",
+        image: "./songs/images/Bhaag-Milkha-Bhaag.jpg",
+        wallpaper: "./songs/images/Bhaag-Milkha-Bhaag-background.jpg",
+      },
+    2: {
+        name: "./songs/Songs/Sporty/Brothers Anthem.m4a",
+        artist: "Vishal Dadlani, Ajay Atul",
+        image: "./songs/images/Brothers-Anthem.jpg",
+        wallpaper: "./songs/images/Brothers-Anthem-background.jpg",
+      },
+    3: {
+        name: "./songs/Songs/Sporty/Chak De India.m4a",
+        artist: "Sukhvinder Singh, Salim-Sulaiman",
+        image: "./songs/images/Chak-De-India.webp",
+        wallpaper: "./songs/images/Chak-De-India-background.jpg",
+      },
+    4: {
+        name: "./songs/Songs/Sporty/Challa(Main Lad Jaana).m4a",
+        artist: "Romy, Vivek Hariharan, Shashwat Sachdev",
+        image: "./songs/images/Challa.jpg",
+        wallpaper: "./songs/images/Challa-background.jpg",
+      },
+    5: {
+        name: "./songs/Songs/Sporty/Dangal(Title Track).m4a",
+        artist: "Daler Mehndi",
+        image: "./songs/images/Dangal.jpg",
+        wallpaper: "./songs/images/Dangal-background.jpg",
+      },
+    6: {
+        name: "./songs/Songs/Sporty/Chak Lein De.m4a",
+        artist: "Kailash Kher",
+        image: "./songs/images/Chak-Lein-De.jpg",
+        wallpaper: "./songs/images/Chak-Lein-De-background.jpg",
+      },
+    7: {
+        name: "./songs/Songs/Sporty/Jagga Jiteya.m4a",
+        artist: "Daler Mehndi, Dee MC, Shashwat Sachdev",
+        image: "./songs/images/Jagga-Jiteya.webp",
+        wallpaper: "./songs/images/Jagga-Jiteya-background.jpg",
+      },
+    8: {
+        name: "./songs/Songs/Sporty/Parwah Nahi.m4a",
+        artist: "Siddharth Basrur",
+        image: "./songs/images/Parwah-Nahi.jpg",
+        wallpaper: "./songs/images/Parwah-Nahi-background.jpg",
+      },
+    9: {
+        name: "./songs/Songs/Sporty/Soorma Anthem.m4a",
+        artist: "Shankar Mahadevan",
+        image: "./songs/images/Soorma-Anthem.jpg",
+        wallpaper: "./songs/images/Soorma-Anthem-background.jpg",
+      },
+    10: {
+        name: "./songs/Songs/Sporty/Zinda.m4a",
+        artist: "Shankar Mahadevan",
+        image: "./songs/images/Zinda.jpg",
+        wallpaper: "./songs/images/Zinda-background.jpg",
       }
 };
 
