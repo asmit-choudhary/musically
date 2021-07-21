@@ -117,6 +117,7 @@ const angleDown = document.querySelector("#list-down");
 const musicList = document.querySelector(".music-list");
 
 const moodList = document.querySelector(".moods");
+const mobileMood = document.querySelector(".mood-list-mobile");
 
 let isPlaying = false;
 
@@ -133,6 +134,7 @@ noRepeatSongs.addEventListener("click", noRepeatTrack);
 listButten.addEventListener("click", songsList);
 
 moodList.addEventListener("change", moodListChanger);
+mobileMood.addEventListener('click', () => moodList.click());
 
 function playAudio() {
   play(songs[currentSong], false);
@@ -147,7 +149,7 @@ function play(source, isNext) {
     playBtn.classList.add("hidden");
     songPic.style["background-image"] = `url(${source.image})`;
     songPicElem.style["background-image"] = `url(${source.wallpaper})`;
-    let songName = extractName(source.name);
+    let songName = wordShortner(extractName(source.name),15);
     songNameElem.children[0].textContent = songName;
     songArtistElem.children[0].textContent = source.artist;
     if (audioControls.currentTime < 3 || isNext) {
@@ -402,18 +404,19 @@ function musicCellTemplate(key, image, name, artist) {
               </div>`;
 }
 
+
 function addMusicCells(songs) {
   musicList.innerHTML = "";
   for (const [key, value] of Object.entries(songs)) {
     // currentSong = key;
-    musicList.innerHTML += musicCellTemplate(key, value.image, extractName(value.name), wordShortner(value.artist));
+    musicList.innerHTML += musicCellTemplate(key, value.image, wordShortner(extractName(value.name), 17), wordShortner(value.artist, 35));
   }
 }
 
 addMusicCells(songs);
 
-function wordShortner(word) {
-  return word.length < 35? word : word.substr(0,35) + "...";
+function wordShortner(word, length) {
+  return word.length < length? word : word.substr(0,length) + "...";
 }
 
 
@@ -421,13 +424,11 @@ function moodListChanger(evt){
   console.log("changed....");
   let mood = evt.target.value;
   console.log(mood);
+  currentSong = -1;
   switch(mood){
       case "happy": songs = HAPPY;
                     addMusicCells(songs);
                     break;
-      case "normal": songs = NORMAL;
-                     addMusicCells(songs);
-                     break;
       case "sad": songs = SAD;
                   addMusicCells(songs);
                   break;
@@ -437,7 +438,7 @@ function moodListChanger(evt){
       case "high": songs = HIGH;
                    addMusicCells(songs);
                    break;
-      case "joyfull": songs = JOYFULL;
+      case "joyfull": songs = JOYFUL;
                       addMusicCells(songs);
                       break;
       case "sporty": songs = SPORTY;
@@ -450,8 +451,11 @@ function moodListChanger(evt){
                          addMusicCells(songs);
                          break; 
       case "rap": songs = RAP;
-                          addMusicCells(songs);
-                          break;           
+                  addMusicCells(songs);
+                  break;  
+      default: songs = NORMAL;
+               addMusicCells(songs);
+               break;         
   }
 }
 

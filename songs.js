@@ -553,7 +553,7 @@ const HIGH = {
       }
 };
 
-const JOYFULL = {
+const JOYFUL = {
     0: {
         name: "./songs/Let Me Love You.mp3",
         artist: "Justin Bieber feat. DJ Snake",
