@@ -523,21 +523,6 @@ const SAD = {
       }
 };
 
-const STUDY = {
-    0: {
-        name: "./songs/Different World.m4a",
-        artist: "Alan Walker feat. Sofia Carson",
-        image: "./songs/images/Different-world.jpg",
-        wallpaper: "./songs/images/Different-world-background.jpg",
-      },
-    1: {
-        name: "./songs/On My Way.m4a",
-        artist: "Alan Wakar feat. Farruko, Sabrina Carpenter",
-        image: "./songs/images/on-my-way.jpg",
-        wallpaper: "./songs/images/on-my-way-background.jpg",
-      }
-};
-
 const HIGH = {
     0: {
         name: "./songs/21 Century.mp3",
@@ -550,22 +535,136 @@ const HIGH = {
         artist: "Sidhu Moose Wala",
         image: "./songs/images/Famous_480x480_1529137214.jpg",
         wallpaper: "./songs/images/famous-sidhu-moose-wala-Background.jpg",
+      },
+    2: {
+        name: "./songs/21 Century.mp3",
+        artist: "Mankirt Aulakh Ft. Singga",
+        image: "./songs/images/21-Century-Mankirt-Aulakh.jpg",
+        wallpaper: "./songs/images/21-century-Background.jpg",
+      },
+    3: {
+        name: "./songs/FAMOUS.mp3",
+        artist: "Sidhu Moose Wala",
+        image: "./songs/images/Famous_480x480_1529137214.jpg",
+        wallpaper: "./songs/images/famous-sidhu-moose-wala-Background.jpg",
+      },
+    4: {
+        name: "./songs/21 Century.mp3",
+        artist: "Mankirt Aulakh Ft. Singga",
+        image: "./songs/images/21-Century-Mankirt-Aulakh.jpg",
+        wallpaper: "./songs/images/21-century-Background.jpg",
+      },
+    5: {
+        name: "./songs/FAMOUS.mp3",
+        artist: "Sidhu Moose Wala",
+        image: "./songs/images/Famous_480x480_1529137214.jpg",
+        wallpaper: "./songs/images/famous-sidhu-moose-wala-Background.jpg",
+      },
+    6: {
+        name: "./songs/21 Century.mp3",
+        artist: "Mankirt Aulakh Ft. Singga",
+        image: "./songs/images/21-Century-Mankirt-Aulakh.jpg",
+        wallpaper: "./songs/images/21-century-Background.jpg",
+      },
+    7: {
+        name: "./songs/FAMOUS.mp3",
+        artist: "Sidhu Moose Wala",
+        image: "./songs/images/Famous_480x480_1529137214.jpg",
+        wallpaper: "./songs/images/famous-sidhu-moose-wala-Background.jpg",
+      },
+    8: {
+        name: "./songs/21 Century.mp3",
+        artist: "Mankirt Aulakh Ft. Singga",
+        image: "./songs/images/21-Century-Mankirt-Aulakh.jpg",
+        wallpaper: "./songs/images/21-century-Background.jpg",
+      },
+    9: {
+        name: "./songs/FAMOUS.mp3",
+        artist: "Sidhu Moose Wala",
+        image: "./songs/images/Famous_480x480_1529137214.jpg",
+        wallpaper: "./songs/images/famous-sidhu-moose-wala-Background.jpg",
+      },
+    10: {
+        name: "./songs/21 Century.mp3",
+        artist: "Mankirt Aulakh Ft. Singga",
+        image: "./songs/images/21-Century-Mankirt-Aulakh.jpg",
+        wallpaper: "./songs/images/21-century-Background.jpg",
+      },
+    11: {
+        name: "./songs/FAMOUS.mp3",
+        artist: "Sidhu Moose Wala",
+        image: "./songs/images/Famous_480x480_1529137214.jpg",
+        wallpaper: "./songs/images/famous-sidhu-moose-wala-Background.jpg",
       }
 };
 
 const JOYFUL = {
     0: {
-        name: "./songs/Let Me Love You.mp3",
-        artist: "Justin Bieber feat. DJ Snake",
-        image: "./songs/images/DJ-Snake-Let-Me-Love-You.jpg",
-        wallpaper: "./songs/images/justin-bieber-background.jpg",
+        name: "./songs/Songs/JoyFul/8 Parche.m4a",
+        artist: "Baani Sandhu, Gur Sidhu",
+        image: "./songs/images/8-Parche.jpg",
+        wallpaper: "./songs/images/8-Parche-background.jpg",
+      },
+    3: {
+        name: "./songs/Songs/JoyFul/Gun Label.m4a",
+        artist: "Jigar Ft Gurlej Akhtar",
+        image: "./songs/images/Gun-Label.webp",
+        wallpaper: "./songs/images/Gun-Label-background.jpg",
+      },
+    5: {
+        name: "./songs/Songs/JoyFul/HINT.m4a",
+        artist: "Karan Aujla",
+        image: "./songs/images/hint.jpg",
+        wallpaper: "./songs/images/hint-background.jpg",
+      },
+    6: {
+        name: "./songs/Songs/JoyFul/Jatt Life.m4a",
+        artist: "Varinder Brar",
+        image: "./songs/images/jatt-Life.jpg",
+        wallpaper: "./songs/images/jatt-Life-background.jpg",
+      },
+    8: {
+        name: "./songs/Songs/JoyFul/Laembadgini.m4a",
+        artist: "Diljit Dosanjh",
+        image: "./songs/images/Laembadgini.jpg",
+        wallpaper: "./songs/images/Laembadgini-background.jpg",
       },
     1: {
-        name: "./songs/Yummy.mp3",
-        artist: "Justin Bieber",
-        image: "./songs/images/yummy.jpg",
-        wallpaper: "./songs/images/justin-bieber-background.jpg",
-      }
+        name: "./songs/Songs/JoyFul/Bhai Log.m4a",
+        artist: "Korala Maan ft. Gurlej Akhtar",
+        image: "./songs/images/Bhai-Log.jpg",
+        wallpaper: "./songs/images/Bhai-Log-background.jpg",
+      },
+    4: {
+        name: "./songs/Songs/JoyFul/Guilty.m4a",
+        artist: "Inder Chahal, Karan Aujla",
+        image: "./songs/images/Guilty.jpg",
+        wallpaper: "./songs/images/Guilty-background.jpg",
+      },
+    7: {
+        name: "./songs/Songs/JoyFul/Mexico Koka.m4a",
+        artist: "Karan Aujla",
+        image: "./songs/images/Mexico-Koka.jpg",
+        wallpaper: "./songs/images/Mexico-Koka-background.jpg",
+      },
+    2: {
+        name: "./songs/Songs/JoyFul/DOLLAR.m4a",
+        artist: "Sidhu Moose Wala",
+        image: "./songs/images/DOLLAR.jpg",
+        wallpaper: "./songs/images/DOLLAR-background.jpg",
+      },
+    9: {
+        name: "./songs/Songs/JoyFul/So High.m4a",
+        artist: "Sidhu Moose Wala",
+        image: "./songs/images/So-High.webp",
+        wallpaper: "./songs/images/So-High-background.jpg",
+      },
+    10: {
+          name: "./songs/Songs/JoyFul/Takkar.m4a",
+          artist: "Varinder Brar",
+          image: "./songs/images/Takkar.jpg",
+          wallpaper: "./songs/images/Takkar-background.jpg",
+      }  
 };
 
 const SPORTY = {
@@ -593,19 +692,19 @@ const SPORTY = {
         image: "./songs/images/Chak-De-India.webp",
         wallpaper: "./songs/images/Chak-De-India-background.jpg",
       },
-    4: {
+    5: {
         name: "./songs/Songs/Sporty/Challa(Main Lad Jaana).m4a",
         artist: "Romy, Vivek Hariharan, Shashwat Sachdev",
         image: "./songs/images/Challa.jpg",
         wallpaper: "./songs/images/Challa-background.jpg",
       },
-    5: {
+    6: {
         name: "./songs/Songs/Sporty/Dangal(Title Track).m4a",
         artist: "Daler Mehndi",
         image: "./songs/images/Dangal.jpg",
         wallpaper: "./songs/images/Dangal-background.jpg",
       },
-    6: {
+    4: {
         name: "./songs/Songs/Sporty/Chak Lein De.m4a",
         artist: "Kailash Kher",
         image: "./songs/images/Chak-Lein-De.jpg",
@@ -662,13 +761,13 @@ const ROMANTIC = {
         image: "./songs/images/DJ-Snake-Let-Me-Love-You.jpg",
         wallpaper: "./songs/images/justin-bieber-background.jpg",
       },
-    4: {
+    9: {
         name: "./songs/Songs/Romantic/Tum Hi Aana.m4a",
         artist: "Jubin Nautiyal", 
         image: "./songs/images/Tum-Hi-Aana.webp",
         wallpaper: "./songs/images/Tum-Hi-Aana-background.jpg",
       },
-    5: {
+    4: {
         name: "./songs/Songs/Romantic/Moonlight.mp3",
         artist: "Harnoor",
         image: "./songs/images/Moonlight.jpg",
@@ -686,13 +785,13 @@ const ROMANTIC = {
         image: "./songs/images/Nishaan.jpg",
         wallpaper: "./songs/images/Nishaan-background.jpg",
       },
-    8: {
+    5: {
         name: "./songs/Songs/Romantic/Never Love Again.m4a",
         artist: "Selena Gomez, ZAYN", 
         image: "./songs/images/Never-Love-Again.jpg",
         wallpaper: "./songs/images/Never-Love-Again.jpg",
       },
-    9: {
+    8: {
         name: "./songs/Songs/Romantic/Temporary Pyar.mp3",
         artist: "Adaab Kharoud, Kaka",
         image: "./songs/images/Temporary-Pyar.jpg",
@@ -713,61 +812,61 @@ const AGGRESSIVE = {
     image: "./songs/images/badnam.jpg",
     wallpaper: "./songs/images/badnam-background.jpg",
   },
-1: {
+  1: {
     name: "./songs/Songs/Aggressive/BOLO HAR HAR HAR.m4a",
     artist: "Badshah",
     image: "./songs/images/bolo-har-har-har.jpg",
     wallpaper: "./songs/images/bolo-har-har-har-background.jpg",
   },
-2: {
+  2: {
     name: "./songs/Songs/Aggressive/Daayre.m4a",
     artist: "Arijit Singh",
     image: "./songs/images/daayre.jpg",
     wallpaper: "./songs/images/daayre-background.jpg",
   },
-3: {
+  4: {
     name: "./songs/Songs/Aggressive/FAMOUS.mp3",
     artist: "Sidhu Moose Wala",
     image: "./songs/images/Famous_480x480_1529137214.jpg",
     wallpaper: "./songs/images/famous-sidhu-moose-wala-Background.jpg",
   },
-4: {
+  7: {
     name: "./songs/Songs/Aggressive/Jee Karda.m4a",
     artist: "Divya Kumar",
     image: "./songs/images/jee-karda.jpg",
     wallpaper: "./songs/images/jee-karda-background.jpg",
   },
-5: {
+  6: {
     name: "./songs/Songs/Aggressive/Katal Mubarak.m4a",
     artist: "A Kay",
     image: "./songs/images/katal-mubarak.jpg",
     wallpaper: "./songs/images/katal-mubarak-background.jpeg",
   },
-6: {
+  8: {
     name: "./songs/Songs/Aggressive/SAY MY NAME ENGLISH.m4a",
     artist: "Krsna",
     image: "./songs/images/say-my-name.webp",
     wallpaper: "./songs/images/say-my-name-background.jpg",
   },
-7: {
+  9: {
     name: "./songs/Songs/Aggressive/SAY MY NAME HINDI.m4a",
     artist: "Krsna",
     image: "./songs/images/say-my-name.webp",
     wallpaper: "./songs/images/say-my-name-background.jpg",
   },
-8: {
+  5: {
     name: "./songs/Songs/Aggressive/Kalla Changa.m4a",
     artist: "Ninja",
     image: "./songs/images/kalla-changa.jpg",
     wallpaper: "./songs/images/kalla-changa-background.jpg",
   },
-9: {
+  10: {
     name: "./songs/Songs/Aggressive/YALGAAR.m4a",
     artist: "CarryMinati",
     image: "./songs/images/yalgaar.jpg",
     wallpaper: "./songs/images/yalgaar-background.jpg",
   },
-10: {
+  3: {
     name: "./songs/Songs/Aggressive/DEVIL.m4a",
     artist: "Sidhu Moose Wala",
     image: "./songs/images/devil.jpg",
@@ -794,19 +893,19 @@ const RAP = {
     image: "./songs/images/godzilla.jpg",
     wallpaper: "./songs/images/godzilla-background.jpg", 
   },
-  3:{
+  4:{
     name: "./songs/Songs/Rap/MAKASAM.m4a",
     artist: "Krsna",
     image: "./songs/images/makasam.jpg",
     wallpaper: "./songs/images/makasam-background.jpg", 
   },
-  4:{
+  5:{
     name: "./songs/Songs/Rap/Roll Up.m4a",
     artist: "Krsna ft. Badshah",
     image: "./songs/images/roll-up.jpg",
     wallpaper: "./songs/images/roll-up-background.jpg", 
   },
-  5:{
+  8:{
     name: "./songs/Songs/Rap/Villain.m4a",
     artist: "Krsna Ft. Karma, IKKA",
     image: "./songs/images/villain.jpg",
@@ -818,19 +917,19 @@ const RAP = {
     image: "./songs/images/Saza-E-Maut.jpg",
     wallpaper: "./songs/images/Saza-E-Maut-background.jpg", 
   },
-  7:{
+  3:{
     name: "./songs/Songs/Rap/Living Legend.m4a",
     artist: "Krsna Ft. Rashmeet Kaur",
     image: "./songs/images/living-legend.jpg",
     wallpaper: "./songs/images/living-legend-background.jpg", 
   },
-  8:{
+  9:{
     name: "./songs/Songs/Rap/VYANJAN.m4a",
     artist: "Krsna",
     image: "./songs/images/VYANJAN.jpg",
     wallpaper: "./songs/images/VYANJAN-background.jpg", 
   },
-  9:{
+  7:{
     name: "./songs/Songs/Rap/SHEIKH CHILLI.m4a",
     artist: "Raftaar",
     image: "./songs/images/SHEIKH-CHILLI.jpg",
