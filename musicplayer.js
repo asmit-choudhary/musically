@@ -69,6 +69,8 @@ function play(source, isNext) {
     if (audioControls.currentTime < 3 || isNext) {
       audioControls.setAttribute("src", source.name);
       audioControls.load();
+      document.getElementsByTagName('title')[0].innerHTML = songName;
+      document.querySelector('.global-title').setAttribute('content', source.image);
     }
     audioControls.play();
     settotalTimeOfSong(source);
@@ -133,6 +135,12 @@ document.body.onkeydown = (evt) => {
   } else if (evt.keyCode == 39) {
     nextTrack(currentSong);
   } else if (evt.keyCode == 37) {
+    preTrack();
+  }
+  else if(evt.keyCode == 176){
+    nextTrack(currentSong);
+  }
+  else if(evt.keyCode == 177){
     preTrack();
   }
   // console.log(evt.keyCode);
