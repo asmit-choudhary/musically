@@ -9,6 +9,7 @@ audioControls.autoplay = false;
 audioControls.setAttribute("preload", "metadata");
 
 let currentSong = 0;
+let previousSong = 0;
 const playBtn = document.querySelector("#play-btn");
 const pauseBtn = document.querySelector("#pause-btn");
 const prevBtn = document.querySelector("#pre-song");
@@ -71,10 +72,12 @@ function play(source, isNext) {
       audioControls.load();
       document.getElementsByTagName('title')[0].innerHTML = songName;
       document.querySelector('.global-title').setAttribute('content', source.image);
+      currentSongHighlighter();
+      previousSong = currentSong;
     }
     audioControls.play();
     settotalTimeOfSong(source);
-    console.log("Playing");
+    // console.log("Playing");
     // isPlaying = !isPlaying;
     // console.log(audioControls);
     // console.log("play->" + audioControls.paused);
@@ -223,14 +226,14 @@ document.querySelector(".mute-btn").addEventListener("click", (evt) => {
   }
   audioControls.muted = true;
   evt.target.style.color = "red";
-  console.log("mute-btn");
+  // console.log("mute-btn");
 });
 
 document.querySelector(".full-vol-btn").addEventListener("click", (evt) => {
   audioControls.volume = 1;
   //evt.target.style.color = 'dodgerBlue';
   volumeRange.value = 100;
-  console.log("full-vol-btn");
+  // console.log("full-vol-btn");
 });
 
 let isShuffled = false;
@@ -257,7 +260,7 @@ function shuffleSong(arr) {
       tempSongs[i] = songs[shuffledarr[i]];
     }
     addMusicCells(tempSongs);
-    console.log(tempSongs);
+    // console.log(tempSongs);
     preOrderSongs = songs;
     songs = tempSongs;
     isShuffled = !isShuffled;
@@ -332,7 +335,18 @@ function addMusicCells(songs) {
   for (const [key, value] of Object.entries(songs)) {
     // currentSong = key;
     musicList.innerHTML += musicCellTemplate(key, value.image, wordShortner(extractName(value.name), 17), wordShortner(value.artist, 35));
+    // currentSongHighlighter();
   }
+}
+
+function currentSongHighlighter(){
+  let currentElement = document.querySelector(".music-list").children.item(currentSong);
+  let previousElement = document.querySelector(".music-list").children.item(previousSong);
+
+  // previousElement.style.backgroundColor = "rgba(40, 44, 52, 0.4)";
+  previousElement.style.backgroundImage = "linear-gradient(to right, rgba(40,44,52,0.4), rgba(40,44,52,0.4))";
+  currentElement.style.backgroundImage = "linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1))";
+  // console.log(currentElement);
 }
 
 addMusicCells(songs);
@@ -343,10 +357,11 @@ function wordShortner(word, length) {
 
 
 function moodListChanger(evt){
-  console.log("changed....");
+  // console.log("changed....");
   let mood = evt.target.value;
-  console.log(mood);
+  // console.log(mood);
   currentSong = -1;
+  previousSong = 0;
   switch(mood){
       case "happy": songs = HAPPY;
                     addMusicCells(songs);
