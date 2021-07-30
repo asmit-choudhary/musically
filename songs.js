@@ -552,7 +552,7 @@ const ROMANTIC = {
         wallpaper: "./songs/images/KHAIRIYAT-background.jpg",
       },
     3: {
-        name: "./songs/Songs/Normal/Let Me Love You.mp3",
+        name: "./songs/Songs/Romantic/Let Me Love You.mp3",
         artist: "Justin Bieber feat. DJ Snake",
         image: "./songs/images/DJ-Snake-Let-Me-Love-You.jpg",
         wallpaper: "./songs/images/justin-bieber-background.jpg",

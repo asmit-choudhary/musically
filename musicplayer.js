@@ -4,6 +4,7 @@ let preOrderSongs;
 let isRepeat = false;
 // shuffleSong(songs);
 
+// entire audio is controlled inside this element
 const audioControls = document.createElement("audio");
 audioControls.autoplay = false;
 audioControls.setAttribute("preload", "metadata");
@@ -73,7 +74,7 @@ function play(source, isNext) {
       document.getElementsByTagName('title')[0].innerHTML = songName;
       document.querySelector('.global-title').setAttribute('content', source.image);
       currentSongHighlighter();
-      previousSong = currentSong;
+      previousSong = currentSong;    // for marking the previous song to remove the playing background(Red).
     }
     audioControls.play();
     settotalTimeOfSong(source);
@@ -335,7 +336,6 @@ function addMusicCells(songs) {
   for (const [key, value] of Object.entries(songs)) {
     // currentSong = key;
     musicList.innerHTML += musicCellTemplate(key, value.image, wordShortner(extractName(value.name), 17), wordShortner(value.artist, 35));
-    // currentSongHighlighter();
   }
 }
 
@@ -352,7 +352,7 @@ function currentSongHighlighter(){
 addMusicCells(songs);
 
 function wordShortner(word, length) {
-  return word.length < length? word : word.substr(0,length) + "...";
+  return word.length < length ? word : word.substr(0,length) + "...";
 }
 
 
