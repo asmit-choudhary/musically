@@ -169,6 +169,10 @@ h3 {
   margin-top: 20px;
 }
 
+#volume-range{
+  background: linear-gradient(to right, #202020 0%, red 50%, #fff 50%, #fff 100%);
+}
+
 .oper-close-btn {
   position: absolute;
   height: 70px;
