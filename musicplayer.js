@@ -162,16 +162,24 @@ audioControls.addEventListener("timeupdate", () => {
   timeRange.value = parseInt(
     (audioControls.currentTime / audioControls.duration) * 100
   );
+  colorSlider(timeRange, timeRange.value);
 });
 
 timeRange.addEventListener("change", (evt) => {
   // console.log(evt.target.value);
   timeRange.value = evt.target.value;
-  audioControls.currentTime = parseInt(
-    (evt.target.value / 100) * audioControls.duration
-  );
+  audioControls.currentTime = parseInt((evt.target.value / 100) * audioControls.duration) || 0;
+  colorSlider(timeRange, timeRange.value);
   // console.log(parseInt((evt.target.value / 100) * audioControls.duration));
 });
+
+// timeRange.oninput = colorSlider;
+volumeRange.oninput = (evt) => {colorSlider(volumeRange, evt.target.value)};
+
+function colorSlider(elem, value) {
+  // let value = (this.value-this.min)/(this.max-this.min)*100;
+  elem.style.background = 'linear-gradient(to right, black 0%, red ' + value + '%, #fff ' + value + '%, white 100%)';
+};
 
 window.onload = () => {
   setSongAttributes(songs[currentSong]);
