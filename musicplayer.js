@@ -1,4 +1,4 @@
- let songs = NORMAL;
+let songs = NORMAL;
 
 let preOrderSongs;
 let isRepeat = false;
@@ -11,8 +11,10 @@ audioControls.setAttribute("preload", "metadata");
 
 let currentSong = 0;
 let previousSong = 0;
-const playBtn = document.querySelector("#play-btn");
-const pauseBtn = document.querySelector("#pause-btn");
+// const playBtn = document.querySelector("#play-btn");
+// const pauseBtn = document.querySelector("#pause-btn");
+const waitLoader = document.querySelector('.progress');
+const playWrapper = document.querySelector('.play');
 const prevBtn = document.querySelector("#pre-song");
 const nextBtn = document.querySelector("#next-song");
 const songPic = document.querySelector(".picture");
@@ -37,8 +39,7 @@ const mobileMood = document.querySelector(".mood-list-mobile");
 
 let isPlaying = false;
 
-playBtn.addEventListener("click", playAudio);
-pauseBtn.addEventListener("click", pause);
+playWrapper.onclick = playAudio;
 prevBtn.addEventListener("click", preTrack);
 nextBtn.addEventListener("click", nextTrack);
 audioControls.addEventListener("ended", nextTrack);
@@ -51,9 +52,16 @@ listButten.addEventListener("click", songsList);
 
 moodList.addEventListener("change", moodListChanger);
 mobileMood.addEventListener('click', () => moodList.click());
+moodList.selectedIndex = 0;    // setting selected "Normal" by default in mood-list
+
+
+audioControls.load(); 
 
 function playAudio() {
-  play(songs[currentSong], false);
+  if(audioControls.paused)
+    play(songs[currentSong], false);
+  else
+    pause();
 }
 
 function play(source, isNext) {
@@ -61,8 +69,7 @@ function play(source, isNext) {
     if (isRepeat) {
       currentTime = 0;
     }
-    pauseBtn.classList.remove("hidden");
-    playBtn.classList.add("hidden");
+    playWrapper.innerHTML = pauseBtn();
     songPic.style["background-image"] = `url(${source.image})`;
     songPicElem.style["background-image"] = `url(${source.wallpaper})`;
     let songName = wordShortner(extractName(source.name),15);
@@ -78,22 +85,30 @@ function play(source, isNext) {
     }
     audioControls.play();
     settotalTimeOfSong(source);
-    // console.log("Playing");
-    // isPlaying = !isPlaying;
-    // console.log(audioControls);
-    // console.log("play->" + audioControls.paused);
   }
 }
 
+
 function pause() {
   if (!audioControls.paused) {
-    playBtn.classList.remove("hidden");
-    pauseBtn.classList.add("hidden");
     audioControls.pause();
-    // isPlaying = !isPlaying;
-    // console.log("pause->" + audioControls.paused);
+    playWrapper.innerHTML = playBtn();
   }
 }
+
+audioControls.onwaiting = startLoad;
+audioControls.oncanplay = stopLoad;
+
+function startLoad(){
+    playWrapper.innerHTML = waitLoaderAnimation();
+}
+
+function stopLoad(){
+    playWrapper.innerHTML = pauseBtn();
+}
+
+
+
 
 /**
  * Extracts name from the location address of the song.
@@ -152,9 +167,7 @@ document.body.onkeydown = (evt) => {
 
 function changeVolume(evt) {
   let val = evt.target.value;
-  // console.log('before' + val);
   val = val / 100;
-  // console.log('after' + val);
   audioControls.volume = val;
 }
 
@@ -166,18 +179,15 @@ audioControls.addEventListener("timeupdate", () => {
 });
 
 timeRange.addEventListener("change", (evt) => {
-  // console.log(evt.target.value);
   timeRange.value = evt.target.value;
   audioControls.currentTime = parseInt((evt.target.value / 100) * audioControls.duration) || 0;
   colorSlider(timeRange, timeRange.value);
-  // console.log(parseInt((evt.target.value / 100) * audioControls.duration));
 });
 
-// timeRange.oninput = colorSlider;
+
 volumeRange.oninput = (evt) => {colorSlider(volumeRange, evt.target.value)};
 
 function colorSlider(elem, value) {
-  // let value = (this.value-this.min)/(this.max-this.min)*100;
   elem.style.background = 'linear-gradient(to right, black 0%, red ' + value + '%, #fff ' + value + '%, white 100%)';
 };
 
@@ -186,8 +196,6 @@ window.onload = () => {
 };
 
 audioControls.addEventListener("timeupdate", function () {
-  // console.log(audioControls.currentTime);
-  // console.log("duration------->" + audioControls.duration);
   settotalTimeOfSong();
   setcuurentTimeOfSong();
 });
@@ -240,14 +248,12 @@ document.querySelector(".mute-btn").addEventListener("click", (evt) => {
 
 document.querySelector(".full-vol-btn").addEventListener("click", (evt) => {
   audioControls.volume = 1;
-  //evt.target.style.color = 'dodgerBlue';
   volumeRange.value = 100;
-  // console.log("full-vol-btn");
 });
 
 let isShuffled = false;
 
-function shuffleSong(arr) {
+function shuffleSong() {
   let shuffledarr = [];
   let size = Object.keys(songs).length;
   let shuffleBtn = document.querySelector("#shuffle");
@@ -324,18 +330,7 @@ function playListSong(current) {
 }
 
 function musicCellTemplate(key, image, name, artist) {
-  return `<div class="music-item" onclick = "playListSong(${key})">
-                <div class="items">
-                  <img
-                    class="song-image"
-                    src= ${image}
-                  />
-                </div>
-                <div class="contant">
-                  <div class="items"><h5>${name}</h5></div>
-                  <div class="items"><h6>${artist}</h6></div>
-                </div>
-              </div>`;
+  return songElement(key, image, name, artist);
 }
 
 
