@@ -49,7 +49,7 @@
         <div class="picture"></div>
         <div class="song-name"><h1>Song name</h1></div>
         <div class="song-artist">
-          <span style="font-size: 1em">Artist Name</span>
+          <span style="font-size: 0.9em; color: #ddd">Artist Name</span>
         </div>
       </div>
       <div class="icon">
@@ -67,9 +67,11 @@
             ></path>
           </svg>
         </div>
-        <div class="play">
+        <div class="play pause" data-playing = "false">
           <i class="fa fa-play-circle fa-3x" id="play-btn"></i>
+          <!-- <i class="fa fa-play-circle fa-3x" id="play-btn"></i>
           <i class="fa fa-pause-circle fa-3x hidden" id="pause-btn"></i>
+          <div class="progress circular hidden"></div> -->
         </div>
         <div class="next">
           <!-- <i class="fa fa-forward fa-2x" id="next-song"></i> -->
@@ -135,12 +137,13 @@
         <option value="joyfull">🤣 JoyFul</option>
         <option value="sporty">🚴‍♀️ Sporty</option>
         <option value="romantic">😍 Romantic</option>
-        <option value="aggressive">🤬 Aggressive</option>
+        <option value="aggressive">😄 Aggressive</option>
         <option value="rap">😈 Rap</option>
       </select>
     </div>
 
-    <script src="songs.js"></script>
-    <script src="musicplayer.js"></script>
+    <script src = "templates.js"></script>
+    <script src = "songs.js"></script>
+    <script src = "musicplayer.js"></script>
   </body>
 </html>
