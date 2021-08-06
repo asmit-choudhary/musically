@@ -540,7 +540,7 @@ const ROMANTIC = {
         wallpaper: "./songs/images/bekhayali-background.jpg",
       },
     1: {
-        name: "./songs/Songs/Normal/Dil Mein Ho Tum.mp3",
+        name: "./songs/Songs/Romantic/Dil Mein Ho Tum.mp3",
         artist: "Armaan Malik",
         image: "./songs/images/Dil-mein-ho-tum.jpg",
         wallpaper: "./songs/images/Dil-Mein-Ho-Tum-Song-Lyrics-background.jpg",
@@ -552,7 +552,7 @@ const ROMANTIC = {
         wallpaper: "./songs/images/KHAIRIYAT-background.jpg",
       },
     3: {
-        name: "./songs/Songs/Normal/Let Me Love You.mp3",
+        name: "./songs/Songs/Romantic/Let Me Love You.mp3",
         artist: "Justin Bieber feat. DJ Snake",
         image: "./songs/images/DJ-Snake-Let-Me-Love-You.jpg",
         wallpaper: "./songs/images/justin-bieber-background.jpg",
