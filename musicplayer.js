@@ -72,7 +72,7 @@ function play(source, isNext) {
     playWrapper.innerHTML = pauseBtn();
     songPic.style["background-image"] = `url(${source.image})`;
     songPicElem.style["background-image"] = `url(${source.wallpaper})`;
-    let songName = wordShortner(extractName(source.name),15);
+    let songName = wordShortner(extractName(source.name),18);
     songNameElem.children[0].textContent = songName;
     songArtistElem.children[0].textContent = source.artist;
     if (audioControls.currentTime < 3 || isNext) {

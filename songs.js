@@ -1,9 +1,9 @@
 const NORMAL = {
     0: {
-        name: "./songs/Songs/Normal/21 Century.mp3",
-        artist: "Mankirt Aulakh Ft. Singga",
-        image: "./songs/images/21-Century-Mankirt-Aulakh.jpg",
-        wallpaper: "./songs/images/21-century-Background.jpg",
+        name: "./songs/Songs/English/I Like Me Better.mp3",
+        artist: "Ed Sheeran, Justin Beiber",
+        image: "./songs/images/I-like-me-better.jpg",
+        wallpaper: "./songs/images/I-like-me-better.jpg",
       },
     1: {
         name: "./songs/Songs/Normal/GIRLFRIEND.mp3",
